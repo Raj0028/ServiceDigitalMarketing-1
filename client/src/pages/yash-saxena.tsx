@@ -246,57 +246,76 @@ export default function YashSaxena() {
             <p className="text-gray-600 text-center mb-8">
               Explore real campaign screenshots and performance data from my past projects
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="space-y-4">
               <a
                 href="https://docs.google.com/presentation/d/1zqvyAQIz5sI1x5Ic_3CJzANhuuZ37eof/edit?usp=sharing&ouid=112685130110956760197&rtpof=true&sd=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-blue-50 to-pink-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-200"
+                className="flex items-center justify-between p-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all group"
                 data-testid="link-facebook-instagram-google-deck"
               >
-                <div className="flex gap-2">
-                  <SiFacebook className="h-8 w-8 text-blue-600" />
-                  <SiInstagram className="h-8 w-8 text-pink-600" />
-                  <SiGoogle className="h-8 w-8 text-blue-500" />
+                <div className="flex items-center gap-4">
+                  <div className="flex gap-2 bg-white/20 p-3 rounded-lg">
+                    <SiFacebook className="h-6 w-6" />
+                    <SiInstagram className="h-6 w-6" />
+                    <SiGoogle className="h-6 w-6" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-bold mb-1">
+                      Facebook, Instagram & Google Ads
+                    </h3>
+                    <p className="text-sm text-blue-100">
+                      View campaign screenshots and ad creatives
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 text-center">
-                  Facebook, Instagram & Google Ads Screenshots
-                </h3>
-                <p className="text-sm text-gray-600 text-center">
-                  View real campaign examples and ad creatives
-                </p>
+                <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
               </a>
               
               <a
                 href="https://docs.google.com/presentation/d/15Y8fziafk6P7A2_OYN2SVLTWtvVedQdR/edit?usp=sharing&ouid=112685130110956760197&rtpof=true&sd=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-200"
+                className="flex items-center justify-between p-5 bg-orange-600 hover:bg-orange-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all group"
                 data-testid="link-reddit-deck"
               >
-                <SiReddit className="h-8 w-8 text-orange-600" />
-                <h3 className="text-lg font-semibold text-gray-900 text-center">
-                  Reddit Ads Screenshots
-                </h3>
-                <p className="text-sm text-gray-600 text-center">
-                  Specialized Reddit advertising campaigns and results
-                </p>
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/20 p-3 rounded-lg">
+                    <SiReddit className="h-6 w-6" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-bold mb-1">
+                      Reddit Ads Campaign Deck
+                    </h3>
+                    <p className="text-sm text-orange-100">
+                      Specialized Reddit advertising campaigns and results
+                    </p>
+                  </div>
+                </div>
+                <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
               </a>
               
               <a
                 href="https://docs.google.com/spreadsheets/d/1fJ6CNZZ5FZeWywg6iWS7GFgpuGe7I8YpGob1UgfI9KM/edit?gid=1777441820#gid=1777441820"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-200"
+                className="flex items-center justify-between p-5 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all group"
                 data-testid="link-analytics-report"
               >
-                <TrendingUp className="h-8 w-8 text-green-600" />
-                <h3 className="text-lg font-semibold text-gray-900 text-center">
-                  Data Analytics Performance Report
-                </h3>
-                <p className="text-sm text-gray-600 text-center">
-                  Detailed campaign metrics and performance analysis
-                </p>
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/20 p-3 rounded-lg">
+                    <TrendingUp className="h-6 w-6" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-bold mb-1">
+                      Campaign Performance Analytics
+                    </h3>
+                    <p className="text-sm text-green-100">
+                      Detailed metrics and performance analysis spreadsheet
+                    </p>
+                  </div>
+                </div>
+                <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
               </a>
             </div>
           </CardContent>
