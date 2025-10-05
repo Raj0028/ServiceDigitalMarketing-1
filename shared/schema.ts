@@ -11,12 +11,16 @@ export const inquiries = pgTable("inquiries", {
   country: text("country").notNull(),
   message: text("message").notNull(),
   platform: text("platform").notNull(),
+  ipAddress: text("ip_address").notNull(),
+  remarks: text("remarks"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
 export const insertInquirySchema = createInsertSchema(inquiries).omit({
   id: true,
   createdAt: true,
+  ipAddress: true,
+  remarks: true,
 }).extend({
   name: z.string().min(1, "Name is required"),
   phone: z.string().min(8, "Valid phone number is required"),
