@@ -3,6 +3,7 @@ import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import { SiFacebook, SiInstagram, SiReddit, SiYoutube, SiGoogle, SiLinkedin, SiTiktok, SiSnapchat } from 'react-icons/si';
 import { Target, Globe, TrendingUp, ArrowRight, Users, BarChart3, CheckCircle } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 const platforms = [
   {
@@ -80,6 +81,13 @@ const platforms = [
 ];
 
 export default function Home() {
+  useSEO({
+    title: 'Digital Marketing Services - Expert Social Media & Search Advertising',
+    description: 'Professional digital marketing and advertising services across Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat. Get expert campaign management and ROI-driven results.',
+    ogTitle: 'Expert Digital Marketing & Paid Advertising Services',
+    ogDescription: 'Drive real results with professional paid advertising campaigns across all major platforms. Expert campaign management for lead generation and brand awareness.',
+  });
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
