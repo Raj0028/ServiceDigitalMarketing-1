@@ -27,7 +27,7 @@ export const insertInquirySchema = createInsertSchema(inquiries).omit({
   email: z.string().email("Valid email address is required"),
   country: z.string().min(1, "Country is required"),
   message: z.string().min(10, "Please provide more details about your business and goals"),
-  platform: z.enum(["facebook", "instagram", "reddit", "youtube", "google", "linkedin", "tiktok", "snapchat"]),
+  platform: z.enum(["facebook", "instagram", "reddit", "youtube", "google", "linkedin", "tiktok", "snapchat", "yash-saxena"]),
 });
 
 export type InsertInquiry = z.infer<typeof insertInquirySchema>;
