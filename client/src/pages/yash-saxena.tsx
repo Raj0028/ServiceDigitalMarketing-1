@@ -458,9 +458,9 @@ export default function YashSaxena() {
         <div className="mt-12 text-center py-8 border-t border-gray-200">
           <p className="text-gray-600 text-lg mb-6">Thank you for visiting!</p>
           <div className="border-t border-gray-200 pt-6">
-            <p className="text-gray-600">
+            <p className="text-gray-400 text-sm">
               For getting a dedicated page for showcasing your skills, kindly reach out to us at:{' '}
-              <a href="mailto:team@servicedigitalmarketing.com" className="text-blue-600 hover:underline font-medium">
+              <a href="mailto:team@servicedigitalmarketing.com" className="text-gray-500 hover:underline">
                 team@servicedigitalmarketing.com
               </a>
             </p>
