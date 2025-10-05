@@ -115,7 +115,7 @@ export default function YashSaxena() {
                 Digital Advertising Specialist
               </p>
               <p className="text-xl text-gray-600 mb-6">
-                6.2+ Years of Experience | BTech + MBA
+                Experience: 6.2+ Years
               </p>
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-3">
