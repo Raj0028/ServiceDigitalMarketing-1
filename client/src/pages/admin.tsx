@@ -1,16 +1,64 @@
 import { useQuery } from '@tanstack/react-query';
-import { Download, Mail, Phone, MapPin, MessageSquare, Calendar } from 'lucide-react';
+import { useLocation } from 'wouter';
+import { useEffect } from 'react';
+import { Download, Mail, Phone, MapPin, MessageSquare, Calendar, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import type { Inquiry } from '@shared/schema';
 import { format } from 'date-fns';
+import { apiRequest } from '@/lib/queryClient';
+import { useToast } from '@/hooks/use-toast';
 
 export default function Admin() {
+  const [, setLocation] = useLocation();
+  const { toast } = useToast();
+
+  const { data: authData, isLoading: authLoading } = useQuery<{ success: boolean; user?: any }>({
+    queryKey: ['/api/auth/me'],
+    retry: false,
+  });
+
   const { data, isLoading } = useQuery<{ success: boolean; inquiries: Inquiry[] }>({
     queryKey: ['/api/inquiries'],
+    enabled: authData?.success === true,
   });
+
+  useEffect(() => {
+    if (!authLoading && authData?.success !== true) {
+      setLocation('/login');
+    }
+  }, [authData, authLoading, setLocation]);
+
+  const handleLogout = async () => {
+    try {
+      await apiRequest('POST', '/api/auth/logout', {});
+      toast({
+        title: 'Logged Out',
+        description: 'You have been successfully logged out',
+      });
+      setLocation('/login');
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to logout',
+        variant: 'destructive',
+      });
+    }
+  };
+
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
+
+  if (authData?.success !== true) {
+    return null;
+  }
 
   const inquiries = data?.inquiries || [];
 
@@ -59,9 +107,19 @@ export default function Admin() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-admin-title">Admin Dashboard</h1>
-          <p className="text-gray-600" data-testid="text-admin-subtitle">View and manage all enquiry submissions</p>
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-admin-title">Admin Dashboard</h1>
+            <p className="text-gray-600" data-testid="text-admin-subtitle">View and manage all enquiry submissions</p>
+          </div>
+          <Button 
+            onClick={handleLogout} 
+            variant="outline"
+            data-testid="button-logout"
+          >
+            <LogOut className="mr-2 h-4 w-4" />
+            Logout
+          </Button>
         </div>
 
         <Card>
