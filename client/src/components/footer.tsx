@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { SiLinkedin, SiX, SiFacebook } from 'react-icons/si';
+import { SiLinkedin, SiInstagram, SiFacebook } from 'react-icons/si';
 import logoPath from '@assets/SDM logo B - Copy_1759514538263.png';
 
 const platformLinks = [
@@ -75,21 +75,27 @@ export default function Footer() {
             <h3 className="font-bold mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/servicedigitalmarketing/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                 data-testid="footer-linkedin"
               >
                 <SiLinkedin className="h-5 w-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/servicedigitalmarketing_com/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
-                data-testid="footer-twitter"
+                data-testid="footer-instagram"
               >
-                <SiX className="h-5 w-5" />
+                <SiInstagram className="h-5 w-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.facebook.com/servicedigitalmarketing.official" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                 data-testid="footer-facebook"
               >
