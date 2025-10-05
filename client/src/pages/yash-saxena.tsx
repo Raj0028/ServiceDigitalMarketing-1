@@ -223,9 +223,17 @@ export default function YashSaxena() {
                   <GraduationCap className="h-5 w-5 text-blue-600" />
                   Education
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-2 mb-6">
                   <p className="text-gray-700">• Bachelor of Technology / Engineering</p>
                   <p className="text-gray-700">• Master of Business Administration (MBA)</p>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <MessageSquare className="h-5 w-5 text-blue-600" />
+                  Languages
+                </h3>
+                <div className="space-y-2">
+                  <p className="text-gray-700">• English (Fluent)</p>
+                  <p className="text-gray-700">• Hindi (Fluent)</p>
                 </div>
               </div>
             </div>
