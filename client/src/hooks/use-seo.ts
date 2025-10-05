@@ -33,25 +33,35 @@ export function useSEO({
       element.setAttribute('content', content);
     };
 
+    const removeMetaTag = (name: string, isProperty = false) => {
+      const attribute = isProperty ? 'property' : 'name';
+      const element = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (element) {
+        element.remove();
+      }
+    };
+
     setMetaTag('description', description);
     setMetaTag('og:title', ogTitle || title, true);
     setMetaTag('og:description', ogDescription || description, true);
     
     if (ogImage) {
       setMetaTag('og:image', ogImage, true);
+      setMetaTag('twitter:image', ogImage);
+    } else {
+      removeMetaTag('og:image', true);
+      removeMetaTag('twitter:image');
     }
     
     if (ogUrl) {
       setMetaTag('og:url', ogUrl, true);
+    } else {
+      removeMetaTag('og:url', true);
     }
     
     setMetaTag('og:type', 'website', true);
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', ogTitle || title);
     setMetaTag('twitter:description', ogDescription || description);
-    
-    if (ogImage) {
-      setMetaTag('twitter:image', ogImage);
-    }
   }, [title, description, ogTitle, ogDescription, ogImage, ogUrl]);
 }
