@@ -154,6 +154,11 @@ export default function Admin() {
     ? allInquiries 
     : allInquiries.filter(inq => inq.platform === selectedPlatform);
 
+  const getPlatformCount = (platformId: string) => {
+    if (platformId === 'all') return allInquiries.length;
+    return allInquiries.filter(inq => inq.platform === platformId).length;
+  };
+
   const downloadCSV = () => {
     if (filteredInquiries.length === 0) return;
 
@@ -372,7 +377,12 @@ export default function Admin() {
                     value={platform.id}
                     data-testid={`tab-${platform.id}`}
                   >
-                    {platform.label}
+                    <span className="flex items-center gap-2">
+                      {platform.label}
+                      <Badge variant="secondary" className="ml-1 text-xs">
+                        {getPlatformCount(platform.id)}
+                      </Badge>
+                    </span>
                   </TabsTrigger>
                 ))}
               </TabsList>
