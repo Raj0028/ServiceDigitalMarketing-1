@@ -261,12 +261,9 @@ export default function YashSaxena() {
                     <SiGoogle className="h-6 w-6" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-bold mb-1">
-                      Facebook, Instagram & Google Ads
+                    <h3 className="text-lg font-bold">
+                      Facebook, Instagram & Google Ads Campaign Manager Screenshot Deck
                     </h3>
-                    <p className="text-sm text-blue-100">
-                      View campaign screenshots and ad creatives
-                    </p>
                   </div>
                 </div>
                 <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
@@ -284,12 +281,9 @@ export default function YashSaxena() {
                     <SiReddit className="h-6 w-6" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-bold mb-1">
-                      Reddit Ads Campaign Deck
+                    <h3 className="text-lg font-bold">
+                      Reddit Ads Campaign Manager Screenshot Deck
                     </h3>
-                    <p className="text-sm text-orange-100">
-                      Specialized Reddit advertising campaigns and results
-                    </p>
                   </div>
                 </div>
                 <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
@@ -307,12 +301,9 @@ export default function YashSaxena() {
                     <TrendingUp className="h-6 w-6" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-bold mb-1">
-                      Campaign Performance Analytics
+                    <h3 className="text-lg font-bold">
+                      Campaign Performance Analytics Google Sheet
                     </h3>
-                    <p className="text-sm text-green-100">
-                      Detailed metrics and performance analysis spreadsheet
-                    </p>
                   </div>
                 </div>
                 <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
