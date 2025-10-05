@@ -20,7 +20,8 @@ import {
   GraduationCap,
   TrendingUp,
   CheckCircle2,
-  Presentation
+  Presentation,
+  Eye
 } from 'lucide-react';
 import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiGooglesheets } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
@@ -30,6 +31,67 @@ const formSchema = insertInquirySchema.extend({
 });
 
 type FormData = z.infer<typeof formSchema>;
+
+function ProtectedContact() {
+  const [revealed, setRevealed] = useState(false);
+  
+  const obfuscatedPhone = [43, 57, 49, 32, 56, 55, 57, 49, 51, 53, 51, 52, 54, 54];
+  const obfuscatedEmail = [121, 97, 115, 104, 115, 97, 120, 101, 110, 97, 46, 112, 101, 114, 115, 111, 110, 97, 108, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109];
+  const obfuscatedWhatsApp = [104, 116, 116, 112, 115, 58, 47, 47, 119, 97, 46, 109, 101, 47, 57, 49, 56, 55, 57, 49, 51, 53, 51, 52, 54, 54];
+
+  const decode = (arr: number[]) => String.fromCharCode(...arr);
+
+  const handleReveal = () => {
+    setRevealed(true);
+  };
+
+  if (!revealed) {
+    return (
+      <Button
+        onClick={handleReveal}
+        variant="outline"
+        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors shadow-md"
+        data-testid="button-reveal-contact"
+      >
+        <Eye className="h-5 w-5" />
+        Click to Reveal Contact Details
+      </Button>
+    );
+  }
+
+  const phone = decode(obfuscatedPhone);
+  const email = decode(obfuscatedEmail);
+  const whatsappUrl = decode(obfuscatedWhatsApp);
+
+  return (
+    <div className="space-y-4" role="region" aria-live="polite">
+      <div className="flex flex-wrap gap-3">
+        <a 
+          href={`tel:${phone}`}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+          data-testid="button-call"
+        >
+          <Phone className="h-5 w-5" />
+          {phone}
+        </a>
+        <Button
+          onClick={() => window.open(whatsappUrl, '_blank')}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-md"
+          data-testid="button-whatsapp"
+        >
+          <SiWhatsapp className="h-5 w-5" />
+          WhatsApp
+        </Button>
+      </div>
+      <div className="flex items-center gap-2" data-testid="text-email">
+        <Mail className="h-5 w-5 text-gray-600" />
+        <a href={`mailto:${email}`} className="text-lg text-blue-600 hover:underline">
+          {email}
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function YashSaxena() {
   const { toast } = useToast();
@@ -88,10 +150,6 @@ export default function YashSaxena() {
     { icon: SiSnapchat, name: 'Snapchat Ads', color: 'text-yellow-400' },
   ];
 
-  const openWhatsApp = () => {
-    window.open('https://wa.me/918791353466', '_blank');
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
@@ -117,30 +175,7 @@ export default function YashSaxena() {
               <p className="text-xl text-gray-600 mb-6">
                 Experience: 6.2+ Years
               </p>
-              <div className="space-y-4">
-                <div className="flex flex-wrap gap-3">
-                  <a 
-                    href="tel:+918791353466"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md"
-                    data-testid="button-call"
-                  >
-                    <Phone className="h-5 w-5" />
-                    +91 8791353466
-                  </a>
-                  <Button
-                    onClick={openWhatsApp}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-md"
-                    data-testid="button-whatsapp"
-                  >
-                    <SiWhatsapp className="h-5 w-5" />
-                    WhatsApp
-                  </Button>
-                </div>
-                <div className="flex items-center gap-2" data-testid="text-email">
-                  <Mail className="h-5 w-5 text-gray-600" />
-                  <span className="text-lg text-gray-700">yashsaxena.personal@gmail.com</span>
-                </div>
-              </div>
+              <ProtectedContact />
             </div>
           </div>
         </div>
