@@ -31,9 +31,14 @@ Preferred communication style: Simple, everyday language.
 **Development Setup**: Custom Vite integration in development mode provides HMR (Hot Module Replacement) and middleware mode for seamless frontend-backend integration. Production builds serve static assets from the dist directory.
 
 **API Design**: RESTful API with routes defined in `server/routes.ts`:
-- `POST /api/inquiries` - Submit new inquiry
-- `GET /api/inquiries` - Retrieve all inquiries
-- `GET /api/inquiries/:platform` - Get platform-specific inquiries
+- `POST /api/inquiries` - Submit new inquiry (public)
+- `GET /api/inquiries` - Retrieve all inquiries (requires authentication)
+- `GET /api/inquiries/:platform` - Get platform-specific inquiries (requires authentication)
+- `POST /api/auth/register` - Register first admin user (restricted to first user only)
+- `POST /api/auth/login` - Admin login
+- `POST /api/auth/logout` - Admin logout
+- `GET /api/auth/me` - Check authentication status
+- `GET /api/auth/can-register` - Check if registration is available
 
 **Request Processing**: JSON body parsing with raw body preservation for potential webhook integrations. Request/response logging middleware tracks API performance and responses.
 
@@ -45,19 +50,34 @@ Preferred communication style: Simple, everyday language.
 
 **ORM**: Drizzle ORM provides type-safe database operations with schema-first approach. Schema definitions include:
 - `inquiries` table: Stores client inquiries with name, phone, email, country, message, platform, and timestamp
-- `users` table: Stores user authentication data (currently unused but scaffolded)
+- `users` table: Stores admin user credentials (username and bcrypt-hashed password)
 
 **Schema Validation**: Drizzle-Zod integration generates Zod schemas from database schema, ensuring runtime validation matches database constraints.
 
-**Storage Abstraction**: `IStorage` interface with in-memory implementation (`MemStorage`) for development/testing. Can be swapped for database implementation without changing business logic.
+**Storage Abstraction**: `DatabaseStorage` implementation using PostgreSQL via Drizzle ORM. Provides methods for user management (getUser, getUserByUsername, getAllUsers, createUser) and inquiry management (createInquiry, getInquiries, getInquiriesByPlatform).
 
 **Migration Strategy**: Drizzle Kit handles schema migrations with `db:push` command for applying changes to PostgreSQL database.
 
 ### Authentication and Authorization
 
-**Current State**: User schema exists but authentication is not implemented. The application currently has no authentication layer, making all inquiry endpoints publicly accessible.
+**Implementation**: Session-based authentication using Passport.js with local strategy for username/password authentication.
 
-**Planned Architecture**: User table structure supports username/password authentication, suggesting future implementation of session-based or token-based authentication.
+**Security Features**:
+- **Password Hashing**: bcrypt with 12 salt rounds for secure password storage
+- **First-User-Only Registration**: Admin registration restricted to first user only (prevents unauthorized admin creation)
+- **Protected Endpoints**: All inquiry read endpoints require authentication
+- **Session Management**: Express-session with secure HTTP-only cookies (24-hour expiry)
+
+**Authentication Flow**:
+1. First-time setup: User creates admin account at `/login` (only available when no users exist)
+2. Subsequent access: Users login at `/login` with username/password
+3. Protected access: Admin dashboard at `/admin` requires authentication, redirects to login if not authenticated
+4. Logout: Clears session and redirects to login page
+
+**Access Control**:
+- Public routes: Inquiry submission (`POST /api/inquiries`), all landing pages
+- Protected routes: Admin dashboard (`/admin`), inquiry retrieval (`GET /api/inquiries`, `GET /api/inquiries/:platform`)
+- Admin-only: CSV export functionality for downloading all inquiry data
 
 ### External Dependencies
 
@@ -77,6 +97,12 @@ Preferred communication style: Simple, everyday language.
 - Neon Database serverless PostgreSQL
 - Drizzle ORM for database operations
 - Drizzle Kit for migrations
+
+**Authentication**:
+- Passport.js for authentication strategy
+- passport-local for username/password authentication
+- bcrypt for password hashing
+- express-session for session management
 
 **Development Tools**:
 - Vite for build tooling and dev server
