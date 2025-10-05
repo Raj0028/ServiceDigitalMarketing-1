@@ -463,6 +463,7 @@ export default function YashSaxena() {
               <a href="mailto:team@servicedigitalmarketing.com" className="text-gray-500 hover:underline">
                 team@servicedigitalmarketing.com
               </a>
+              {' '}| $5 per year per 1000 IP hit
             </p>
           </div>
         </div>
