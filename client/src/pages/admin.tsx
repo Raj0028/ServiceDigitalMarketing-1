@@ -26,6 +26,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const PLATFORMS = [
   { id: 'all', label: 'All Platforms' },
+  { id: 'yash-saxena', label: 'Yash Saxena' },
   { id: 'facebook', label: 'Facebook' },
   { id: 'instagram', label: 'Instagram' },
   { id: 'reddit', label: 'Reddit' },
@@ -185,6 +186,7 @@ export default function Admin() {
 
   const getPlatformColor = (platform: string) => {
     const colors: Record<string, string> = {
+      'yash-saxena': 'bg-purple-100 text-purple-800',
       facebook: 'bg-blue-100 text-blue-800',
       instagram: 'bg-pink-100 text-pink-800',
       reddit: 'bg-orange-100 text-orange-800',
@@ -245,7 +247,9 @@ export default function Admin() {
               {selectedPlatform === 'all' && (
                 <TableCell data-testid={`platform-${inquiry.id}`}>
                   <Badge className={getPlatformColor(inquiry.platform)}>
-                    {inquiry.platform.charAt(0).toUpperCase() + inquiry.platform.slice(1)}
+                    {inquiry.platform === 'yash-saxena' 
+                      ? 'Yash Saxena' 
+                      : inquiry.platform.charAt(0).toUpperCase() + inquiry.platform.slice(1)}
                   </Badge>
                 </TableCell>
               )}
@@ -361,7 +365,7 @@ export default function Admin() {
           </CardHeader>
           <CardContent>
             <Tabs value={selectedPlatform} onValueChange={setSelectedPlatform} className="w-full">
-              <TabsList className="grid w-full grid-cols-3 lg:grid-cols-9 mb-6" data-testid="tabs-platforms">
+              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-6" data-testid="tabs-platforms">
                 {PLATFORMS.map(platform => (
                   <TabsTrigger 
                     key={platform.id} 
