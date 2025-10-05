@@ -19,9 +19,10 @@ import {
   Globe, 
   GraduationCap,
   TrendingUp,
-  CheckCircle2
+  CheckCircle2,
+  Presentation
 } from 'lucide-react';
-import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiMicrosoftpowerpoint, SiGooglesheets } from 'react-icons/si';
+import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiGooglesheets } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
 
 const formSchema = insertInquirySchema.extend({
@@ -256,7 +257,7 @@ export default function YashSaxena() {
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-white/20 p-3 rounded-lg">
-                    <SiMicrosoftpowerpoint className="h-6 w-6" />
+                    <Presentation className="h-6 w-6" />
                   </div>
                   <div className="text-left">
                     <h3 className="text-lg font-bold">
@@ -276,7 +277,7 @@ export default function YashSaxena() {
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-white/20 p-3 rounded-lg">
-                    <SiMicrosoftpowerpoint className="h-6 w-6" />
+                    <Presentation className="h-6 w-6" />
                   </div>
                   <div className="text-left">
                     <h3 className="text-lg font-bold">
