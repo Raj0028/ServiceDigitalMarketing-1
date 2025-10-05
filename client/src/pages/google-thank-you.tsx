@@ -3,8 +3,14 @@ import Footer from '@/components/footer';
 import { Link } from 'wouter';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function GoogleThankYou() {
+  useSEO({
+    title: 'Thank You - Google Ads Inquiry Submitted',
+    description: 'Thank you for your Google Ads inquiry. Our specialists will perform keyword research and create a search strategy within 24 hours.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

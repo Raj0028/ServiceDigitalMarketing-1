@@ -3,8 +3,14 @@ import Footer from '@/components/footer';
 import { Link } from 'wouter';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function YoutubeThankYou() {
+  useSEO({
+    title: 'Thank You - YouTube Ads Inquiry Submitted',
+    description: 'Thank you for your YouTube Ads inquiry. Our experts will craft a video strategy for your brand and respond within 24 hours.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

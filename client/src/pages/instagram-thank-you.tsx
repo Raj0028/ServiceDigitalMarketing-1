@@ -3,8 +3,14 @@ import Footer from '@/components/footer';
 import { Link } from 'wouter';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function InstagramThankYou() {
+  useSEO({
+    title: 'Thank You - Instagram Ads Inquiry Submitted',
+    description: 'Thank you for your Instagram Ads inquiry. Our specialists will review your creative vision and respond within 24 hours with tailored recommendations.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

@@ -3,8 +3,14 @@ import Footer from '@/components/footer';
 import { Link } from 'wouter';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function TiktokThankYou() {
+  useSEO({
+    title: 'Thank You - TikTok Ads Inquiry Submitted',
+    description: 'Thank you for your TikTok Ads inquiry. Our creative team will design viral-worthy content concepts and respond within 24 hours.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

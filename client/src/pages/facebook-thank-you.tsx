@@ -3,8 +3,14 @@ import Footer from '@/components/footer';
 import { Link } from 'wouter';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function FacebookThankYou() {
+  useSEO({
+    title: 'Thank You - Facebook Ads Inquiry Submitted',
+    description: 'Thank you for your Facebook Ads inquiry. Our team will review your request and get back to you within 24 hours with a customized strategy and quote.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

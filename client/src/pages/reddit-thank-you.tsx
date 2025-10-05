@@ -3,8 +3,14 @@ import Footer from '@/components/footer';
 import { Link } from 'wouter';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function RedditThankYou() {
+  useSEO({
+    title: 'Thank You - Reddit Ads Inquiry Submitted',
+    description: 'Thank you for your Reddit Ads inquiry. Our team will analyze the best communities for your brand and respond within 24 hours.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
