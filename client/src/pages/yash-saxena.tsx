@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiGooglesheets } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
+import { useSEO } from '@/hooks/use-seo';
 
 const formSchema = insertInquirySchema.extend({
   platform: z.literal('yash-saxena'),
@@ -94,6 +95,13 @@ function ProtectedContact() {
 }
 
 export default function YashSaxena() {
+  useSEO({
+    title: 'Yash Saxena - Digital Advertising Expert & Marketing Consultant',
+    description: 'Meet Yash Saxena, expert digital advertising consultant specializing in Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat ads. Data-driven campaigns with proven ROI.',
+    ogTitle: 'Yash Saxena - Digital Marketing & Advertising Expert',
+    ogDescription: 'Professional digital advertising consultant with expertise across all major platforms. Get expert campaign management, tracking analytics, and ROI-driven results.',
+  });
+
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
 
