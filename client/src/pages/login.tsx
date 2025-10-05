@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'wouter';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -13,7 +13,7 @@ import { z } from 'zod';
 import { Shield } from 'lucide-react';
 
 const loginSchema = z.object({
-  username: z.string().min(1, 'Username is required'),
+  email: z.string().email('Valid email is required'),
   password: z.string().min(1, 'Password is required'),
 });
 
@@ -22,24 +22,11 @@ type LoginFormData = z.infer<typeof loginSchema>;
 export default function Login() {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
-  const [isRegister, setIsRegister] = useState(false);
-
-  const { data: canRegisterData } = useQuery<{ success: boolean; canRegister: boolean }>({
-    queryKey: ['/api/auth/can-register'],
-  });
-
-  const canRegister = canRegisterData?.canRegister ?? false;
-
-  useEffect(() => {
-    if (canRegister) {
-      setIsRegister(true);
-    }
-  }, [canRegister]);
 
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      username: '',
+      email: '',
       password: '',
     },
   });
@@ -59,42 +46,15 @@ export default function Login() {
     onError: (error: any) => {
       toast({
         title: 'Login Failed',
-        description: 'Invalid username or password',
-        variant: 'destructive',
-      });
-    },
-  });
-
-  const registerMutation = useMutation({
-    mutationFn: async (data: LoginFormData) => {
-      const response = await apiRequest('POST', '/api/auth/register', data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: 'Registration Successful',
-        description: 'Your account has been created!',
-      });
-      setLocation('/admin');
-    },
-    onError: (error: any) => {
-      toast({
-        title: 'Registration Failed',
-        description: 'Username already exists or an error occurred',
+        description: 'Invalid email or password',
         variant: 'destructive',
       });
     },
   });
 
   const onSubmit = (data: LoginFormData) => {
-    if (isRegister) {
-      registerMutation.mutate(data);
-    } else {
-      loginMutation.mutate(data);
-    }
+    loginMutation.mutate(data);
   };
-
-  const isPending = loginMutation.isPending || registerMutation.isPending;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
@@ -106,12 +66,10 @@ export default function Login() {
             </div>
           </div>
           <CardTitle className="text-2xl" data-testid="text-login-title">
-            {isRegister ? 'Create Admin Account' : 'Admin Login'}
+            Admin Login
           </CardTitle>
           <CardDescription data-testid="text-login-subtitle">
-            {isRegister 
-              ? 'Register a new admin account to access the dashboard' 
-              : 'Sign in to access the admin dashboard'}
+            Sign in to access the admin dashboard
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -119,15 +77,16 @@ export default function Login() {
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" data-testid="login-form">
               <FormField
                 control={form.control}
-                name="username"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input 
-                        placeholder="Enter your username" 
+                        type="email"
+                        placeholder="Enter your email" 
                         {...field} 
-                        data-testid="input-username"
+                        data-testid="input-email"
                       />
                     </FormControl>
                     <FormMessage />
@@ -157,26 +116,11 @@ export default function Login() {
               <Button 
                 type="submit" 
                 className="w-full" 
-                disabled={isPending}
+                disabled={loginMutation.isPending}
                 data-testid="button-submit"
               >
-                {isPending ? 'Please wait...' : (isRegister ? 'Register' : 'Login')}
+                {loginMutation.isPending ? 'Please wait...' : 'Login'}
               </Button>
-
-              {canRegister && (
-                <div className="text-center">
-                  <button
-                    type="button"
-                    onClick={() => setIsRegister(!isRegister)}
-                    className="text-sm text-primary hover:underline"
-                    data-testid="button-toggle-mode"
-                  >
-                    {isRegister 
-                      ? 'Already have an account? Login' 
-                      : 'Need an account? Register'}
-                  </button>
-                </div>
-              )}
             </form>
           </Form>
         </CardContent>
