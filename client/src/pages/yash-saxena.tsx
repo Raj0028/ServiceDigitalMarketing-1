@@ -242,7 +242,7 @@ export default function YashSaxena() {
         <Card className="mb-12">
           <CardContent className="p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              Campaign Resources & Case Studies
+              Campaign Manager Screenshot Deck & Google sheet
             </h2>
             <p className="text-gray-600 text-center mb-8">
               Explore real campaign screenshots and performance data from my past projects
