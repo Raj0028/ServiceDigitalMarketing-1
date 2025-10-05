@@ -21,7 +21,7 @@ import {
   TrendingUp,
   CheckCircle2
 } from 'lucide-react';
-import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp } from 'react-icons/si';
+import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiMicrosoftpowerpoint, SiGooglesheets } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
 
 const formSchema = insertInquirySchema.extend({
@@ -255,10 +255,8 @@ export default function YashSaxena() {
                 data-testid="link-facebook-instagram-google-deck"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex gap-2 bg-white/20 p-3 rounded-lg">
-                    <SiFacebook className="h-6 w-6" />
-                    <SiInstagram className="h-6 w-6" />
-                    <SiGoogle className="h-6 w-6" />
+                  <div className="bg-white/20 p-3 rounded-lg">
+                    <SiMicrosoftpowerpoint className="h-6 w-6" />
                   </div>
                   <div className="text-left">
                     <h3 className="text-lg font-bold">
@@ -278,7 +276,7 @@ export default function YashSaxena() {
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-white/20 p-3 rounded-lg">
-                    <SiReddit className="h-6 w-6" />
+                    <SiMicrosoftpowerpoint className="h-6 w-6" />
                   </div>
                   <div className="text-left">
                     <h3 className="text-lg font-bold">
@@ -298,7 +296,7 @@ export default function YashSaxena() {
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-white/20 p-3 rounded-lg">
-                    <TrendingUp className="h-6 w-6" />
+                    <SiGooglesheets className="h-6 w-6" />
                   </div>
                   <div className="text-left">
                     <h3 className="text-lg font-bold">
