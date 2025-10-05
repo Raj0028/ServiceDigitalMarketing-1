@@ -1,53 +1,58 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
-import { storage } from "./storage";
-import type { User } from "@shared/schema";
-import bcrypt from "bcrypt";
 
-const SALT_ROUNDS = 12;
+const ADMIN_EMAIL = "yashsaxena.personal@gmail.com";
+const ADMIN_PASSWORD = "Miet2015@19";
+const ADMIN_ID = "admin-1";
 
-async function hashPassword(password: string): Promise<string> {
-  return bcrypt.hash(password, SALT_ROUNDS);
-}
-
-async function verifyPassword(password: string, hash: string): Promise<boolean> {
-  return bcrypt.compare(password, hash);
+interface AdminUser {
+  id: string;
+  email: string;
 }
 
 passport.use(
-  new LocalStrategy(async (username, password, done) => {
-    try {
-      const user = await storage.getUserByUsername(username);
-      if (!user) {
-        return done(null, false, { message: "Incorrect username or password" });
-      }
+  new LocalStrategy(
+    { usernameField: "email" },
+    async (email, password, done) => {
+      try {
+        if (email !== ADMIN_EMAIL || password !== ADMIN_PASSWORD) {
+          return done(null, false, { message: "Incorrect email or password" });
+        }
 
-      const isValid = await verifyPassword(password, user.password);
-      if (!isValid) {
-        return done(null, false, { message: "Incorrect username or password" });
-      }
+        const adminUser: AdminUser = {
+          id: ADMIN_ID,
+          email: ADMIN_EMAIL,
+        };
 
-      return done(null, user);
-    } catch (err) {
-      return done(err);
+        return done(null, adminUser);
+      } catch (err) {
+        return done(err);
+      }
     }
-  })
+  )
 );
 
 passport.serializeUser((user: Express.User, done) => {
-  done(null, (user as User).id);
+  done(null, (user as AdminUser).id);
 });
 
 passport.deserializeUser(async (id: string, done) => {
   try {
-    const user = await storage.getUser(id);
-    done(null, user);
+    if (id === ADMIN_ID) {
+      const adminUser: AdminUser = {
+        id: ADMIN_ID,
+        email: ADMIN_EMAIL,
+      };
+      done(null, adminUser);
+    } else {
+      done(null, false);
+    }
   } catch (err) {
     done(err);
   }
 });
 
-export { passport, hashPassword };
+export { passport };
 
 export function requireAuth(req: any, res: any, next: any) {
   if (req.isAuthenticated()) {
