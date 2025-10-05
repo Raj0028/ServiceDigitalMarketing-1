@@ -159,20 +159,35 @@ export default function YashSaxena() {
                   Experience & Expertise
                 </h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  With over 6.2 years of dedicated experience in digital advertising, I specialize in creating and managing high-performance advertising campaigns across multiple platforms. My expertise spans across all major advertising platforms, with a primary focus on Facebook, Instagram, and Reddit Ads.
+                  Over <span className="font-bold text-blue-600">6.2+ years</span> of mastering the art and science of digital advertising across the world's most powerful platforms. I don't just run ads—I architect growth engines that turn clicks into customers and budgets into ROI.
                 </p>
-                <div className="space-y-2">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Primary Focus: Facebook, Instagram & Reddit Ads</span>
+                <div className="space-y-3">
+                  <div className="bg-gradient-to-r from-blue-50 to-pink-50 p-3 rounded-lg">
+                    <div className="flex items-center gap-2 mb-1">
+                      <SiFacebook className="h-4 w-4 text-blue-600" />
+                      <SiInstagram className="h-4 w-4 text-pink-600" />
+                      <SiReddit className="h-4 w-4 text-orange-600" />
+                      <span className="font-bold text-gray-900">Primary Expertise</span>
+                    </div>
+                    <p className="text-sm text-gray-700">Facebook, Instagram & Reddit Ads - where I spend most of my time scaling brands</p>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Multi-platform campaign management expertise</span>
+                  <div className="bg-gradient-to-r from-red-50 to-blue-50 p-3 rounded-lg">
+                    <div className="flex items-center gap-2 mb-1">
+                      <SiYoutube className="h-4 w-4 text-red-600" />
+                      <SiGoogle className="h-4 w-4 text-blue-500" />
+                      <SiLinkedin className="h-4 w-4 text-blue-700" />
+                      <SiTiktok className="h-4 w-4 text-gray-900" />
+                      <SiSnapchat className="h-4 w-4 text-yellow-500" />
+                      <span className="font-bold text-gray-900">Extended Arsenal</span>
+                    </div>
+                    <p className="text-sm text-gray-700">YouTube, Google, LinkedIn, TikTok & Snapchat Ads - full-funnel mastery</p>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Data-driven optimization strategies</span>
+                  <div className="flex items-start gap-2 p-3 bg-green-50 rounded-lg">
+                    <TrendingUp className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-bold text-gray-900 block">Performance Obsessed</span>
+                      <span className="text-sm text-gray-700">Data-driven strategies, A/B testing, and relentless optimization to maximize every dollar spent</span>
+                    </div>
                   </div>
                 </div>
               </div>
