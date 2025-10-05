@@ -454,18 +454,9 @@ export default function YashSaxena() {
           </CardContent>
         </Card>
 
-        {/* Footer Contact */}
+        {/* Footer */}
         <div className="mt-12 text-center py-8 border-t border-gray-200">
-          <p className="text-gray-600 mb-4">Prefer to reach out directly?</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918791353466" className="text-blue-600 hover:underline font-medium">
-              +91 8791353466
-            </a>
-            <span className="text-gray-400">|</span>
-            <a href="mailto:yashsaxena.personal@gmail.com" className="text-blue-600 hover:underline font-medium">
-              yashsaxena.personal@gmail.com
-            </a>
-          </div>
+          <p className="text-gray-600 text-lg">Thank you for visiting!</p>
         </div>
       </div>
     </div>
