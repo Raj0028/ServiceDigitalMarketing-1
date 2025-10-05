@@ -3,8 +3,16 @@ import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
 import { SiInstagram } from 'react-icons/si';
 import { Eye, Heart, ShoppingBag } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function InstagramAds() {
+  useSEO({
+    title: 'Instagram Ads Management - Visual Social Media Advertising Services',
+    description: 'Professional Instagram advertising with stunning visual campaigns for 2B+ highly engaged users. Expert management of Stories, Reels, Shopping ads, and more. Drive engagement and sales.',
+    ogTitle: 'Instagram Ads - Visual Stories That Sell',
+    ogDescription: 'Create captivating visual campaigns on Instagram. Professional ad management for brands that thrive on visual appeal with proven engagement and ROI.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

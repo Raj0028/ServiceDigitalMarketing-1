@@ -3,8 +3,16 @@ import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
 import { SiYoutube } from 'react-icons/si';
 import { Play, Video, TrendingUp } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function YoutubeAds() {
+  useSEO({
+    title: 'YouTube Ads Management - Video Advertising Services',
+    description: 'Professional YouTube advertising on the world\'s second-largest search engine. Reach 2B+ users with expert video ad campaigns. Multiple formats, high reach, proven conversions.',
+    ogTitle: 'YouTube Ads - Video Advertising That Drives Action',
+    ogDescription: 'Harness the power of video advertising on YouTube. Capture attention and convert viewers into customers with professionally managed campaigns.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

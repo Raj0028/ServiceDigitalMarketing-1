@@ -3,8 +3,16 @@ import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
 import { SiLinkedin } from 'react-icons/si';
 import { Briefcase, Building, Settings } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function LinkedinAds() {
+  useSEO({
+    title: 'LinkedIn Ads Management - B2B Advertising Services',
+    description: 'Professional LinkedIn advertising for B2B marketing. Reach 900M+ professionals and decision-makers. Expert campaign management with unmatched targeting precision for business growth.',
+    ogTitle: 'LinkedIn Ads - B2B Advertising Excellence',
+    ogDescription: 'Connect with decision-makers and professionals where they network. Professional LinkedIn Ads management delivering B2B results with precision targeting.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

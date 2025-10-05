@@ -3,8 +3,16 @@ import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
 import { SiTiktok } from 'react-icons/si';
 import { Flame, Video, BarChart3 } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function TiktokAds() {
+  useSEO({
+    title: 'TikTok Ads Management - Gen Z & Millennial Advertising Services',
+    description: 'Professional TikTok advertising for 1B+ users. Viral-worthy short-form video campaigns targeting Gen Z and millennials. Expert creative content that resonates and converts.',
+    ogTitle: 'TikTok Ads - Viral-Worthy Content That Converts',
+    ogDescription: 'Create engaging, authentic content for TikTok\'s 1B+ users. Professional ad management with high virality potential and proven results for younger audiences.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

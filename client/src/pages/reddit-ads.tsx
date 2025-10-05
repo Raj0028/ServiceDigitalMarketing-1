@@ -3,8 +3,16 @@ import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
 import { SiReddit } from 'react-icons/si';
 import { MessageCircle, Users, Megaphone } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function RedditAds() {
+  useSEO({
+    title: 'Reddit Ads Management - Community-Focused Advertising Services',
+    description: 'Professional Reddit advertising for 430M+ users across 100K+ niche communities. Authentic engagement with passionate audiences. Expert campaign management for brands seeking genuine connections.',
+    ogTitle: 'Reddit Ads - Engage Passionate Communities',
+    ogDescription: 'Reach highly engaged niche communities on Reddit. Professional ad management for authentic connections with 430M+ active users across specialized subreddits.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

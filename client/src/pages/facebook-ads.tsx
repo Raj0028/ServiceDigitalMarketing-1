@@ -3,8 +3,16 @@ import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
 import { SiFacebook } from 'react-icons/si';
 import { Users, Crosshair, BarChart3 } from 'lucide-react';
+import { useSEO } from '@/hooks/use-seo';
 
 export default function FacebookAds() {
+  useSEO({
+    title: 'Facebook Ads Management - Expert Social Media Advertising Services',
+    description: 'Professional Facebook advertising services with precision targeting for 2.9B+ users. Expert campaign management, advanced analytics, and proven ROI. Get started with Facebook ads today.',
+    ogTitle: 'Facebook Ads That Convert - Expert Campaign Management',
+    ogDescription: 'Leverage Facebook\'s powerful targeting to reach your ideal customers. Professional ad management with proven results across 2.9 billion active users.',
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
