@@ -21,7 +21,15 @@ import {
   TrendingUp,
   CheckCircle2,
   Presentation,
-  Eye
+  Eye,
+  DollarSign,
+  Target,
+  Users,
+  Zap,
+  Heart,
+  MousePointer,
+  Smartphone,
+  MessageCircle
 } from 'lucide-react';
 import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiGooglesheets } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
@@ -289,6 +297,126 @@ export default function YashSaxena() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Campaign Experience Section */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-3">
+              Campaign <span className="text-blue-600">Scale</span> & <span className="text-purple-600">Expertise</span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              Enterprise-level experience managing multi-million dollar campaigns
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Lifetime Ad Spend */}
+            <Card className="bg-gradient-to-br from-blue-600 to-purple-600 text-white border-none shadow-2xl">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <DollarSign className="h-12 w-12 opacity-80" />
+                  <div className="text-right">
+                    <p className="text-sm uppercase tracking-wider opacity-90 mb-1">Lifetime Ad Spend</p>
+                    <p className="text-5xl font-bold">$50M</p>
+                  </div>
+                </div>
+                <p className="text-white/90 text-lg">
+                  Successfully managed close to <span className="font-bold">$50 million</span> in advertising budgets across global campaigns
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Monthly Budget */}
+            <Card className="bg-gradient-to-br from-purple-600 to-pink-600 text-white border-none shadow-2xl">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <TrendingUp className="h-12 w-12 opacity-80" />
+                  <div className="text-right">
+                    <p className="text-sm uppercase tracking-wider opacity-90 mb-1">Peak Monthly Budget</p>
+                    <p className="text-5xl font-bold">$2M</p>
+                  </div>
+                </div>
+                <p className="text-white/90 text-lg">
+                  Handled campaigns with monthly budgets up to <span className="font-bold">$2 million</span>, delivering consistent ROI at scale
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Campaign Types */}
+          <Card>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Campaign Expertise Across All Objectives
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:shadow-md transition-shadow">
+                  <Target className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Lead Generation</h4>
+                    <p className="text-sm text-gray-600">Capturing high-quality leads that convert</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:shadow-md transition-shadow">
+                  <Users className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Brand Awareness</h4>
+                    <p className="text-sm text-gray-600">Building recognition and recall</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg hover:shadow-md transition-shadow">
+                  <MousePointer className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Traffic</h4>
+                    <p className="text-sm text-gray-600">Driving qualified visitors to websites</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:shadow-md transition-shadow">
+                  <Smartphone className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">App Install</h4>
+                    <p className="text-sm text-gray-600">Scaling mobile app user acquisition</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg hover:shadow-md transition-shadow">
+                  <Heart className="h-6 w-6 text-pink-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Engagement</h4>
+                    <p className="text-sm text-gray-600">Fostering meaningful interactions</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg hover:shadow-md transition-shadow">
+                  <MessageCircle className="h-6 w-6 text-indigo-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Messaging</h4>
+                    <p className="text-sm text-gray-600">Direct conversations with prospects</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg hover:shadow-md transition-shadow">
+                  <Zap className="h-6 w-6 text-yellow-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Performance</h4>
+                    <p className="text-sm text-gray-600">ROI-focused conversion campaigns</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg hover:shadow-md transition-shadow">
+                  <TrendingUp className="h-6 w-6 text-teal-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Full-Funnel</h4>
+                    <p className="text-sm text-gray-600">Awareness to conversion strategies</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* Platforms Section */}
         <Card className="mb-12">
