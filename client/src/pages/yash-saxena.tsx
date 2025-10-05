@@ -21,7 +21,7 @@ import {
   TrendingUp,
   CheckCircle2
 } from 'lucide-react';
-import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat } from 'react-icons/si';
+import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
 
 const formSchema = insertInquirySchema.extend({
@@ -116,31 +116,29 @@ export default function YashSaxena() {
               <p className="text-xl text-gray-600 mb-6">
                 6.2+ Years of Experience | BTech + MBA
               </p>
-              <div className="flex flex-wrap gap-3">
-                <a 
-                  href="tel:+918791353466"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md"
-                  data-testid="button-call"
-                >
-                  <Phone className="h-5 w-5" />
-                  +91 8791353466
-                </a>
-                <a 
-                  href="mailto:yashsaxena.personal@gmail.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors shadow-md"
-                  data-testid="button-email"
-                >
-                  <Mail className="h-5 w-5" />
-                  Email Me
-                </a>
-                <Button
-                  onClick={openWhatsApp}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-md"
-                  data-testid="button-whatsapp"
-                >
-                  <MessageSquare className="h-5 w-5" />
-                  WhatsApp
-                </Button>
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-3">
+                  <a 
+                    href="tel:+918791353466"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                    data-testid="button-call"
+                  >
+                    <Phone className="h-5 w-5" />
+                    +91 8791353466
+                  </a>
+                  <Button
+                    onClick={openWhatsApp}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-md"
+                    data-testid="button-whatsapp"
+                  >
+                    <SiWhatsapp className="h-5 w-5" />
+                    WhatsApp
+                  </Button>
+                </div>
+                <div className="flex items-center gap-2" data-testid="text-email">
+                  <Mail className="h-5 w-5 text-gray-600" />
+                  <span className="text-lg text-gray-700">yashsaxena.personal@gmail.com</span>
+                </div>
               </div>
             </div>
           </div>
@@ -193,12 +191,15 @@ export default function YashSaxena() {
                     <p className="font-semibold text-gray-900">Asia-Pacific</p>
                   </div>
                   <div className="bg-blue-50 p-3 rounded-lg">
+                    <p className="font-semibold text-gray-900">Middle East</p>
+                  </div>
+                  <div className="bg-blue-50 p-3 rounded-lg">
                     <p className="font-semibold text-gray-900">United States</p>
                   </div>
                   <div className="bg-blue-50 p-3 rounded-lg">
                     <p className="font-semibold text-gray-900">Canada</p>
                   </div>
-                  <div className="bg-blue-50 p-3 rounded-lg col-span-2">
+                  <div className="bg-blue-50 p-3 rounded-lg">
                     <p className="font-semibold text-gray-900">Europe</p>
                   </div>
                 </div>
@@ -232,6 +233,71 @@ export default function YashSaxena() {
                   <p className="text-sm font-medium text-gray-700 text-center">{platform.name}</p>
                 </div>
               ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Resources Section */}
+        <Card className="mb-12">
+          <CardContent className="p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Campaign Resources & Case Studies
+            </h2>
+            <p className="text-gray-600 text-center mb-8">
+              Explore real campaign screenshots and performance data from my past projects
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <a
+                href="https://docs.google.com/presentation/d/1zqvyAQIz5sI1x5Ic_3CJzANhuuZ37eof/edit?usp=sharing&ouid=112685130110956760197&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-blue-50 to-pink-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-200"
+                data-testid="link-facebook-instagram-google-deck"
+              >
+                <div className="flex gap-2">
+                  <SiFacebook className="h-8 w-8 text-blue-600" />
+                  <SiInstagram className="h-8 w-8 text-pink-600" />
+                  <SiGoogle className="h-8 w-8 text-blue-500" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 text-center">
+                  Facebook, Instagram & Google Ads Screenshots
+                </h3>
+                <p className="text-sm text-gray-600 text-center">
+                  View real campaign examples and ad creatives
+                </p>
+              </a>
+              
+              <a
+                href="https://docs.google.com/presentation/d/15Y8fziafk6P7A2_OYN2SVLTWtvVedQdR/edit?usp=sharing&ouid=112685130110956760197&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-200"
+                data-testid="link-reddit-deck"
+              >
+                <SiReddit className="h-8 w-8 text-orange-600" />
+                <h3 className="text-lg font-semibold text-gray-900 text-center">
+                  Reddit Ads Screenshots
+                </h3>
+                <p className="text-sm text-gray-600 text-center">
+                  Specialized Reddit advertising campaigns and results
+                </p>
+              </a>
+              
+              <a
+                href="https://docs.google.com/spreadsheets/d/1fJ6CNZZ5FZeWywg6iWS7GFgpuGe7I8YpGob1UgfI9KM/edit?gid=1777441820#gid=1777441820"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-200"
+                data-testid="link-analytics-report"
+              >
+                <TrendingUp className="h-8 w-8 text-green-600" />
+                <h3 className="text-lg font-semibold text-gray-900 text-center">
+                  Data Analytics Performance Report
+                </h3>
+                <p className="text-sm text-gray-600 text-center">
+                  Detailed campaign metrics and performance analysis
+                </p>
+              </a>
             </div>
           </CardContent>
         </Card>

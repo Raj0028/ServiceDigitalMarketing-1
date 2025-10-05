@@ -4,7 +4,7 @@
 
 This is a full-stack digital marketing inquiry platform that showcases advertising services across multiple social media and search platforms. The application allows potential clients to submit inquiries for platform-specific advertising campaigns and redirects them to thank-you pages upon successful submission.
 
-The platform features dedicated landing pages for eight major advertising platforms (Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat), each with customized messaging, statistics, and inquiry forms.
+The platform features dedicated landing pages for eight major advertising platforms (Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat), each with customized messaging, statistics, and inquiry forms. Additionally, there is a dedicated landing page for Yash Saxena at `/yash-saxena` showcasing his digital advertising expertise with 6.2+ years experience across global markets (India, Asia-Pacific, Middle East, US, Canada, Europe) with portfolio resources and case studies.
 
 ## User Preferences
 
@@ -118,3 +118,33 @@ Preferred communication style: Simple, everyday language.
 - date-fns for date manipulation
 - clsx and class-variance-authority for conditional class names
 - nanoid for unique ID generation
+
+## Recent Updates (October 2025)
+
+### Yash Saxena Landing Page Enhancements
+
+**Contact Section**:
+- WhatsApp button now displays WhatsApp logo (SiWhatsapp icon)
+- Email changed from button to text display with Mail icon
+- Email displayed as: yashsaxena.personal@gmail.com
+
+**Global Experience**:
+- Added "Middle East" region to global markets coverage
+- Complete coverage: India, Asia-Pacific, Middle East, United States, Canada, Europe
+
+**New Resources Section**:
+Added "Campaign Resources & Case Studies" section with three external resource links:
+
+1. **Facebook, Instagram & Google Ads Screenshots**
+   - Google Slides presentation with real campaign examples
+   - Link: https://docs.google.com/presentation/d/1zqvyAQIz5sI1x5Ic_3CJzANhuuZ37eof/edit
+
+2. **Reddit Ads Screenshots**
+   - Specialized Reddit advertising campaign deck
+   - Link: https://docs.google.com/presentation/d/15Y8fziafk6P7A2_OYN2SVLTWtvVedQdR/edit
+
+3. **Data Analytics Performance Report**
+   - Detailed campaign metrics and performance analysis spreadsheet
+   - Link: https://docs.google.com/spreadsheets/d/1fJ6CNZZ5FZeWywg6iWS7GFgpuGe7I8YpGob1UgfI9KM/edit
+
+All resource links open in new tabs with proper security attributes (target="_blank", rel="noopener noreferrer").
