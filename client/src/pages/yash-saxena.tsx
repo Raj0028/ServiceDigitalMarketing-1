@@ -189,6 +189,13 @@ export default function YashSaxena() {
                       <span className="text-sm text-gray-700">Data-driven strategies, A/B testing, and relentless optimization to maximize every dollar spent</span>
                     </div>
                   </div>
+                  <div className="flex items-start gap-2 p-3 bg-purple-50 rounded-lg">
+                    <CheckCircle2 className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-bold text-gray-900 block">Tracking & Analytics Expert</span>
+                      <span className="text-sm text-gray-700">Pixel integration, GTM, Google Analytics, and conversion tracking setup for accurate measurement</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
