@@ -186,7 +186,7 @@ export default function YashSaxena() {
                 Yash Saxena
               </h1>
               <p className="text-2xl text-gray-700 mb-4 font-medium" data-testid="text-title">
-                Digital Advertising Specialist
+                Paid Advertising Specialist
               </p>
               <p className="text-xl text-gray-600 mb-6">
                 Experience: 6.2+ Years
