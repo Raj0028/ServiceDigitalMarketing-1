@@ -212,27 +212,91 @@ export default function YashSaxena() {
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Over <span className="font-bold text-blue-600">6.2+ years</span> of mastering the art and science of digital advertising across the world's most powerful platforms. I don't just run ads—I architect growth engines that turn clicks into customers and budgets into ROI.
                 </p>
-                <div className="space-y-3">
-                  <div className="bg-gradient-to-r from-blue-50 to-pink-50 p-3 rounded-lg">
-                    <div className="flex items-center gap-2 mb-1">
-                      <SiFacebook className="h-4 w-4 text-blue-600" />
-                      <SiInstagram className="h-4 w-4 text-pink-600" />
-                      <SiReddit className="h-4 w-4 text-orange-600" />
-                      <span className="font-bold text-gray-900">Primary Expertise</span>
+                <div className="space-y-6">
+                  {/* Primary Expertise - Enhanced Design */}
+                  <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 p-[2px] shadow-xl">
+                    <div className="bg-white rounded-xl p-5">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                          Primary Expertise
+                        </div>
+                      </div>
+                      <p className="text-gray-700 font-medium mb-4">Where I spend most of my time scaling brands</p>
+                      <div className="grid grid-cols-3 gap-3">
+                        <div className="group relative bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-2">
+                            <SiFacebook className="h-10 w-10 text-white" />
+                            <span className="text-white text-xs font-semibold text-center">Facebook Ads</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                        <div className="group relative bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-2">
+                            <SiInstagram className="h-10 w-10 text-white" />
+                            <span className="text-white text-xs font-semibold text-center">Instagram Ads</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                        <div className="group relative bg-gradient-to-br from-orange-500 to-red-500 rounded-lg p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-2">
+                            <SiReddit className="h-10 w-10 text-white" />
+                            <span className="text-white text-xs font-semibold text-center">Reddit Ads</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-700">Facebook, Instagram & Reddit Ads - where I spend most of my time scaling brands</p>
                   </div>
-                  <div className="bg-gradient-to-r from-red-50 to-blue-50 p-3 rounded-lg">
-                    <div className="flex items-center gap-2 mb-1">
-                      <SiYoutube className="h-4 w-4 text-red-600" />
-                      <SiGoogle className="h-4 w-4 text-blue-500" />
-                      <SiLinkedin className="h-4 w-4 text-blue-700" />
-                      <SiTiktok className="h-4 w-4 text-gray-900" />
-                      <SiSnapchat className="h-4 w-4 text-yellow-500" />
-                      <span className="font-bold text-gray-900">Extended Arsenal</span>
+
+                  {/* Extended Arsenal - Enhanced Design */}
+                  <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-red-500 via-yellow-500 to-blue-500 p-[2px] shadow-xl">
+                    <div className="bg-white rounded-xl p-5">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="bg-gradient-to-r from-red-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                          Extended Arsenal
+                        </div>
+                      </div>
+                      <p className="text-gray-700 font-medium mb-4">Full-funnel mastery across major platforms</p>
+                      <div className="grid grid-cols-5 gap-2">
+                        <div className="group relative bg-gradient-to-br from-red-500 to-red-600 rounded-lg p-3 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-1">
+                            <SiYoutube className="h-8 w-8 text-white" />
+                            <span className="text-white text-[10px] font-semibold text-center">YouTube</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                        <div className="group relative bg-gradient-to-br from-blue-500 to-green-500 rounded-lg p-3 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-1">
+                            <SiGoogle className="h-8 w-8 text-white" />
+                            <span className="text-white text-[10px] font-semibold text-center">Google</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                        <div className="group relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg p-3 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-1">
+                            <SiLinkedin className="h-8 w-8 text-white" />
+                            <span className="text-white text-[10px] font-semibold text-center">LinkedIn</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                        <div className="group relative bg-gradient-to-br from-gray-900 to-teal-400 rounded-lg p-3 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-1">
+                            <SiTiktok className="h-8 w-8 text-white" />
+                            <span className="text-white text-[10px] font-semibold text-center">TikTok</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                        <div className="group relative bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg p-3 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <div className="flex flex-col items-center gap-1">
+                            <SiSnapchat className="h-8 w-8 text-white" />
+                            <span className="text-white text-[10px] font-semibold text-center">Snapchat</span>
+                          </div>
+                          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-700">YouTube, Google, LinkedIn, TikTok & Snapchat Ads - full-funnel mastery</p>
                   </div>
+
                   <div className="flex items-start gap-2 p-3 bg-green-50 rounded-lg">
                     <TrendingUp className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                     <div>
