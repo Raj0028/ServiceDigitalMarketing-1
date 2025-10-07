@@ -147,7 +147,7 @@ export default function Navigation() {
           
           {/* Menu Panel - Slides from Right */}
           <div 
-            className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl lg:hidden z-50 overflow-y-auto animate-in slide-in-from-right duration-300"
+            className="fixed top-16 sm:top-20 right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl lg:hidden z-50 overflow-y-auto animate-in slide-in-from-right duration-300"
             data-testid="mobile-menu-panel"
           >
             {/* Close Button */}
