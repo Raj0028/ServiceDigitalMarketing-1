@@ -254,12 +254,12 @@ export default function Home() {
               </div>
               
               <div className="grid grid-cols-2 gap-6">
-                <div className="stat-card p-6 rounded-xl" data-testid="stat-satisfaction">
-                  <div className="text-4xl font-bold mb-2 gradient-text">100%</div>
+                <div className="stat-card p-6 rounded-xl overflow-visible" data-testid="stat-satisfaction">
+                  <div className="text-4xl font-bold mb-2 gradient-text pb-2 leading-tight">100%</div>
                   <div className="text-sm text-muted-foreground">Client Satisfaction</div>
                 </div>
                 <div className="stat-card p-6 rounded-xl overflow-visible" data-testid="stat-spend">
-                  <div className="text-4xl font-bold mb-2 gradient-text py-1">$800M+</div>
+                  <div className="text-4xl font-bold mb-2 gradient-text pb-2 leading-tight">$800M+</div>
                   <div className="text-sm text-muted-foreground">Ad Spend Managed</div>
                 </div>
               </div>
