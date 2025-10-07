@@ -12,8 +12,8 @@ export default function RedditAds() {
     description: 'Professional Reddit advertising for 430M+ users across 100K+ niche communities. Authentic engagement with passionate audiences. Expert campaign management for brands seeking genuine connections.',
     ogTitle: 'Reddit Ads - Engage Passionate Communities',
     ogDescription: 'Reach highly engaged niche communities on Reddit. Professional ad management for authentic connections with 430M+ active users across specialized subreddits.',
-    canonical: 'https://yashsaxena.replit.app/reddit-ads',
-    ogUrl: 'https://yashsaxena.replit.app/reddit-ads',
+    canonical: 'https://servicedigitalmarketing.com/reddit-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/reddit-ads',
   });
 
   return (

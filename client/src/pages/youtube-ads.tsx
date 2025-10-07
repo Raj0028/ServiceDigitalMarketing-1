@@ -12,8 +12,8 @@ export default function YoutubeAds() {
     description: 'Professional YouTube advertising on the world\'s second-largest search engine. Reach 2B+ users with expert video ad campaigns. Multiple formats, high reach, proven conversions.',
     ogTitle: 'YouTube Ads - Video Advertising That Drives Action',
     ogDescription: 'Harness the power of video advertising on YouTube. Capture attention and convert viewers into customers with professionally managed campaigns.',
-    canonical: 'https://yashsaxena.replit.app/youtube-ads',
-    ogUrl: 'https://yashsaxena.replit.app/youtube-ads',
+    canonical: 'https://servicedigitalmarketing.com/youtube-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/youtube-ads',
   });
 
   return (

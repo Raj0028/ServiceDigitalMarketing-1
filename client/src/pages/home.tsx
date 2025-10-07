@@ -87,8 +87,8 @@ export default function Home() {
     description: 'Professional digital marketing and advertising services across Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat. Get expert campaign management and ROI-driven results.',
     ogTitle: 'Expert Digital Marketing & Paid Advertising Services',
     ogDescription: 'Drive real results with professional paid advertising campaigns across all major platforms. Expert campaign management for lead generation and brand awareness.',
-    canonical: 'https://yashsaxena.replit.app/',
-    ogUrl: 'https://yashsaxena.replit.app/',
+    canonical: 'https://servicedigitalmarketing.com/',
+    ogUrl: 'https://servicedigitalmarketing.com/',
   });
 
   const scrollToSection = (sectionId: string) => {

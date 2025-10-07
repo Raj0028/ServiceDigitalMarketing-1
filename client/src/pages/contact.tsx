@@ -10,8 +10,8 @@ export default function Contact() {
     description: 'Contact Service Digital Marketing for expert paid advertising services. Get in touch with our team for Facebook, Instagram, Google, and other platform advertising solutions.',
     ogTitle: 'Contact Us - Service Digital Marketing',
     ogDescription: 'Ready to grow your business with paid advertising? Contact our expert team today for a consultation.',
-    canonical: 'https://yashsaxena.replit.app/contact',
-    ogUrl: 'https://yashsaxena.replit.app/contact',
+    canonical: 'https://servicedigitalmarketing.com/contact',
+    ogUrl: 'https://servicedigitalmarketing.com/contact',
   });
 
   return (

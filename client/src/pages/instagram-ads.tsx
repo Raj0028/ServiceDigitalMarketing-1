@@ -12,8 +12,8 @@ export default function InstagramAds() {
     description: 'Professional Instagram advertising with stunning visual campaigns for 2B+ highly engaged users. Expert management of Stories, Reels, Shopping ads, and more. Drive engagement and sales.',
     ogTitle: 'Instagram Ads - Visual Stories That Sell',
     ogDescription: 'Create captivating visual campaigns on Instagram. Professional ad management for brands that thrive on visual appeal with proven engagement and ROI.',
-    canonical: 'https://yashsaxena.replit.app/instagram-ads',
-    ogUrl: 'https://yashsaxena.replit.app/instagram-ads',
+    canonical: 'https://servicedigitalmarketing.com/instagram-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/instagram-ads',
   });
 
   return (

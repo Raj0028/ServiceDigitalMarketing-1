@@ -12,8 +12,8 @@ export default function SnapchatAds() {
     description: 'Professional Snapchat advertising with cutting-edge AR lenses for 750M+ young users. Immersive brand experiences, innovative ad formats, and expert campaign management.',
     ogTitle: 'Snapchat Ads - Immersive AR Experiences',
     ogDescription: 'Engage younger audiences with innovative AR lenses and creative ad formats. Professional Snapchat Ads management delivering immersive brand experiences.',
-    canonical: 'https://yashsaxena.replit.app/snapchat-ads',
-    ogUrl: 'https://yashsaxena.replit.app/snapchat-ads',
+    canonical: 'https://servicedigitalmarketing.com/snapchat-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/snapchat-ads',
   });
 
   return (

@@ -4,4 +4,4 @@ Disallow: /admin
 Disallow: /login
 Disallow: /*-thank-you
 
-Sitemap: https://yashsaxena.replit.app/sitemap.xml
+Sitemap: https://servicedigitalmarketing.com/sitemap.xml

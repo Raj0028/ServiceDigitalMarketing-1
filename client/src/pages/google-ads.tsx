@@ -12,8 +12,8 @@ export default function GoogleAds() {
     description: 'Professional Google Ads management with 5.6B daily searches. Intent-based targeting, global reach, expert PPC campaign optimization. Dominate search results and display networks.',
     ogTitle: 'Google Ads - Dominate Search Results',
     ogDescription: 'Reach customers at the exact moment they\'re searching for your products. Professional Google Ads management delivering intent-driven traffic and conversions.',
-    canonical: 'https://yashsaxena.replit.app/google-ads',
-    ogUrl: 'https://yashsaxena.replit.app/google-ads',
+    canonical: 'https://servicedigitalmarketing.com/google-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/google-ads',
   });
 
   return (

@@ -248,3 +248,10 @@ All resource links open in new tabs with proper security attributes (target="_bl
 - Confirmed noindex tags on private pages
 - Validated structured data rendering on appropriate pages
 - All SEO meta tags verified across different page types
+
+**Domain Configuration (October 2025)**:
+- Updated all canonical URLs from yashsaxena.replit.app to servicedigitalmarketing.com
+- Updated sitemap.xml to use servicedigitalmarketing.com domain
+- Updated robots.txt sitemap reference to servicedigitalmarketing.com
+- All SEO meta tags and Open Graph URLs now reference servicedigitalmarketing.com
+- Domain change applied across all 11 public pages

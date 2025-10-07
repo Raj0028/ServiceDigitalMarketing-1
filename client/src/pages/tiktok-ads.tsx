@@ -12,8 +12,8 @@ export default function TiktokAds() {
     description: 'Professional TikTok advertising for 1B+ users. Viral-worthy short-form video campaigns targeting Gen Z and millennials. Expert creative content that resonates and converts.',
     ogTitle: 'TikTok Ads - Viral-Worthy Content That Converts',
     ogDescription: 'Create engaging, authentic content for TikTok\'s 1B+ users. Professional ad management with high virality potential and proven results for younger audiences.',
-    canonical: 'https://yashsaxena.replit.app/tiktok-ads',
-    ogUrl: 'https://yashsaxena.replit.app/tiktok-ads',
+    canonical: 'https://servicedigitalmarketing.com/tiktok-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/tiktok-ads',
   });
 
   return (

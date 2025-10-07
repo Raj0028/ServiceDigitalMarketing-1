@@ -12,8 +12,8 @@ export default function FacebookAds() {
     description: 'Professional Facebook advertising services with precision targeting for 2.9B+ users. Expert campaign management, advanced analytics, and proven ROI. Get started with Facebook ads today.',
     ogTitle: 'Facebook Ads That Convert - Expert Campaign Management',
     ogDescription: 'Leverage Facebook\'s powerful targeting to reach your ideal customers. Professional ad management with proven results across 2.9 billion active users.',
-    canonical: 'https://yashsaxena.replit.app/facebook-ads',
-    ogUrl: 'https://yashsaxena.replit.app/facebook-ads',
+    canonical: 'https://servicedigitalmarketing.com/facebook-ads',
+    ogUrl: 'https://servicedigitalmarketing.com/facebook-ads',
   });
 
   return (
