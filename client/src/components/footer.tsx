@@ -66,7 +66,7 @@ export default function Footer() {
                 <a href="#" className="hover:text-white transition-colors" data-testid="footer-blog">Blog</a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors" data-testid="footer-contact">Contact</a>
+                <Link href="/contact" className="hover:text-white transition-colors" data-testid="footer-contact">Contact</Link>
               </li>
             </ul>
           </div>
