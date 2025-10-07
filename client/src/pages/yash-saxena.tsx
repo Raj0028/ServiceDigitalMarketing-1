@@ -381,11 +381,11 @@ export default function YashSaxena() {
                   <DollarSign className="h-12 w-12 opacity-80" />
                   <div className="text-right">
                     <p className="text-sm uppercase tracking-wider opacity-90 mb-1">Lifetime Ad Spend</p>
-                    <p className="text-5xl font-bold">$50M</p>
+                    <p className="text-5xl font-bold">$800M</p>
                   </div>
                 </div>
                 <p className="text-white/90 text-lg">
-                  Successfully managed close to <span className="font-bold">$50 million</span> in advertising budgets across global campaigns
+                  Successfully managed close to <span className="font-bold">$800 million</span> in advertising budgets across global campaigns
                 </p>
               </CardContent>
             </Card>
