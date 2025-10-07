@@ -9,6 +9,7 @@ export default function InstagramThankYou() {
   useSEO({
     title: 'Thank You - Instagram Ads Inquiry Submitted',
     description: 'Thank you for your Instagram Ads inquiry. Our specialists will review your creative vision and respond within 24 hours with tailored recommendations.',
+    noindex: true,
   });
 
   return (

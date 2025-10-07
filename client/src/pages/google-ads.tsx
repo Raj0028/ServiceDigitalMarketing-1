@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
+import { ServiceSchema } from '@/components/structured-data';
 import { SiGoogle } from 'react-icons/si';
 import { Search, Target, Globe } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -11,10 +12,16 @@ export default function GoogleAds() {
     description: 'Professional Google Ads management with 5.6B daily searches. Intent-based targeting, global reach, expert PPC campaign optimization. Dominate search results and display networks.',
     ogTitle: 'Google Ads - Dominate Search Results',
     ogDescription: 'Reach customers at the exact moment they\'re searching for your products. Professional Google Ads management delivering intent-driven traffic and conversions.',
+    canonical: 'https://yashsaxena.replit.app/google-ads',
+    ogUrl: 'https://yashsaxena.replit.app/google-ads',
   });
 
   return (
     <div className="min-h-screen bg-background">
+      <ServiceSchema 
+        serviceName="Google Ads Management" 
+        description="Professional Google Ads management with 5.6B daily searches. Intent-based targeting, global reach, expert PPC campaign optimization."
+      />
       <Navigation />
       
       {/* Hero Section */}

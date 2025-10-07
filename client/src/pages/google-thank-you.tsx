@@ -9,6 +9,7 @@ export default function GoogleThankYou() {
   useSEO({
     title: 'Thank You - Google Ads Inquiry Submitted',
     description: 'Thank you for your Google Ads inquiry. Our specialists will perform keyword research and create a search strategy within 24 hours.',
+    noindex: true,
   });
 
   return (

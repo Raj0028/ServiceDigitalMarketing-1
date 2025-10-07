@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
+import { ServiceSchema } from '@/components/structured-data';
 import { SiSnapchat } from 'react-icons/si';
 import { Users, Camera, Zap } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -11,10 +12,16 @@ export default function SnapchatAds() {
     description: 'Professional Snapchat advertising with cutting-edge AR lenses for 750M+ young users. Immersive brand experiences, innovative ad formats, and expert campaign management.',
     ogTitle: 'Snapchat Ads - Immersive AR Experiences',
     ogDescription: 'Engage younger audiences with innovative AR lenses and creative ad formats. Professional Snapchat Ads management delivering immersive brand experiences.',
+    canonical: 'https://yashsaxena.replit.app/snapchat-ads',
+    ogUrl: 'https://yashsaxena.replit.app/snapchat-ads',
   });
 
   return (
     <div className="min-h-screen bg-background">
+      <ServiceSchema 
+        serviceName="Snapchat Ads Management" 
+        description="Professional Snapchat advertising with cutting-edge AR lenses for 750M+ young users. Immersive brand experiences and innovative ad formats."
+      />
       <Navigation />
       
       {/* Hero Section */}

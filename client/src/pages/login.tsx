@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { apiRequest } from '@/lib/queryClient';
+import { useSEO } from '@/hooks/use-seo';
 import { z } from 'zod';
 import { Shield } from 'lucide-react';
 
@@ -22,6 +23,12 @@ type LoginFormData = z.infer<typeof loginSchema>;
 export default function Login() {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
+
+  useSEO({
+    title: 'Admin Login - Digital Marketing Services',
+    description: 'Admin login portal for digital marketing inquiry management',
+    noindex: true,
+  });
 
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),

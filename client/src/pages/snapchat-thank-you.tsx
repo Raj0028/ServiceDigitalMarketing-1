@@ -9,6 +9,7 @@ export default function SnapchatThankYou() {
   useSEO({
     title: 'Thank You - Snapchat Ads Inquiry Submitted',
     description: 'Thank you for your Snapchat Ads inquiry. Our AR specialists will create immersive experience concepts and respond within 24 hours.',
+    noindex: true,
   });
 
   return (

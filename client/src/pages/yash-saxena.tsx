@@ -34,6 +34,7 @@ import {
 import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLinkedin, SiSnapchat, SiWhatsapp, SiGooglesheets } from 'react-icons/si';
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
 import { useSEO } from '@/hooks/use-seo';
+import { PersonSchema } from '@/components/structured-data';
 
 const formSchema = insertInquirySchema.extend({
   platform: z.literal('yash-saxena'),
@@ -108,6 +109,8 @@ export default function YashSaxena() {
     description: 'Meet Yash Saxena, expert digital advertising consultant specializing in Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat ads. Data-driven campaigns with proven ROI.',
     ogTitle: 'Yash Saxena - Digital Marketing & Advertising Expert',
     ogDescription: 'Professional digital advertising consultant with expertise across all major platforms. Get expert campaign management, tracking analytics, and ROI-driven results.',
+    canonical: 'https://yashsaxena.replit.app/yash-saxena',
+    ogUrl: 'https://yashsaxena.replit.app/yash-saxena',
   });
 
   const { toast } = useToast();
@@ -168,6 +171,7 @@ export default function YashSaxena() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <PersonSchema />
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         
         {/* Hero Section */}

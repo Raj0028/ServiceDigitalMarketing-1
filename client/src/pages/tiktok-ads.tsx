@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
+import { ServiceSchema } from '@/components/structured-data';
 import { SiTiktok } from 'react-icons/si';
 import { Flame, Video, BarChart3 } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -11,10 +12,16 @@ export default function TiktokAds() {
     description: 'Professional TikTok advertising for 1B+ users. Viral-worthy short-form video campaigns targeting Gen Z and millennials. Expert creative content that resonates and converts.',
     ogTitle: 'TikTok Ads - Viral-Worthy Content That Converts',
     ogDescription: 'Create engaging, authentic content for TikTok\'s 1B+ users. Professional ad management with high virality potential and proven results for younger audiences.',
+    canonical: 'https://yashsaxena.replit.app/tiktok-ads',
+    ogUrl: 'https://yashsaxena.replit.app/tiktok-ads',
   });
 
   return (
     <div className="min-h-screen bg-background">
+      <ServiceSchema 
+        serviceName="TikTok Ads Management" 
+        description="Professional TikTok advertising for 1B+ users. Viral-worthy short-form video campaigns targeting Gen Z and millennials."
+      />
       <Navigation />
       
       {/* Hero Section */}

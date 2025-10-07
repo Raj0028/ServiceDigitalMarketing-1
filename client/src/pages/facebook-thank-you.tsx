@@ -9,6 +9,7 @@ export default function FacebookThankYou() {
   useSEO({
     title: 'Thank You - Facebook Ads Inquiry Submitted',
     description: 'Thank you for your Facebook Ads inquiry. Our team will review your request and get back to you within 24 hours with a customized strategy and quote.',
+    noindex: true,
   });
 
   return (

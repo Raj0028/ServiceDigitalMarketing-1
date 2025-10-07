@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
+import { OrganizationSchema, WebSiteSchema } from '@/components/structured-data';
 import { SiFacebook, SiInstagram, SiReddit, SiYoutube, SiGoogle, SiLinkedin, SiTiktok, SiSnapchat } from 'react-icons/si';
 import { Target, Globe, TrendingUp, ArrowRight, Users, BarChart3, CheckCircle } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -86,6 +87,8 @@ export default function Home() {
     description: 'Professional digital marketing and advertising services across Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat. Get expert campaign management and ROI-driven results.',
     ogTitle: 'Expert Digital Marketing & Paid Advertising Services',
     ogDescription: 'Drive real results with professional paid advertising campaigns across all major platforms. Expert campaign management for lead generation and brand awareness.',
+    canonical: 'https://yashsaxena.replit.app/',
+    ogUrl: 'https://yashsaxena.replit.app/',
   });
 
   const scrollToSection = (sectionId: string) => {
@@ -97,6 +100,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <OrganizationSchema />
+      <WebSiteSchema />
       <Navigation />
       
       {/* Hero Section */}

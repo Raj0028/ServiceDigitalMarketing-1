@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
+import { ServiceSchema } from '@/components/structured-data';
 import { SiInstagram } from 'react-icons/si';
 import { Eye, Heart, ShoppingBag } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -11,10 +12,16 @@ export default function InstagramAds() {
     description: 'Professional Instagram advertising with stunning visual campaigns for 2B+ highly engaged users. Expert management of Stories, Reels, Shopping ads, and more. Drive engagement and sales.',
     ogTitle: 'Instagram Ads - Visual Stories That Sell',
     ogDescription: 'Create captivating visual campaigns on Instagram. Professional ad management for brands that thrive on visual appeal with proven engagement and ROI.',
+    canonical: 'https://yashsaxena.replit.app/instagram-ads',
+    ogUrl: 'https://yashsaxena.replit.app/instagram-ads',
   });
 
   return (
     <div className="min-h-screen bg-background">
+      <ServiceSchema 
+        serviceName="Instagram Ads Management" 
+        description="Professional Instagram advertising with stunning visual campaigns for 2B+ highly engaged users. Expert management of Stories, Reels, Shopping ads, and more."
+      />
       <Navigation />
       
       {/* Hero Section */}

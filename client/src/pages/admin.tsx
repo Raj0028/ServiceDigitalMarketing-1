@@ -23,6 +23,7 @@ import type { Inquiry } from '@shared/schema';
 import { format } from 'date-fns';
 import { apiRequest, queryClient } from '@/lib/queryClient';
 import { useToast } from '@/hooks/use-toast';
+import { useSEO } from '@/hooks/use-seo';
 
 const PLATFORMS = [
   { id: 'all', label: 'All Platforms' },
@@ -41,6 +42,12 @@ export default function Admin() {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
   const [selectedPlatform, setSelectedPlatform] = useState('all');
+
+  useSEO({
+    title: 'Admin Dashboard - Digital Marketing Inquiry Management',
+    description: 'Admin dashboard for managing digital marketing inquiries and campaigns',
+    noindex: true,
+  });
   const [editingRemarkId, setEditingRemarkId] = useState<string | null>(null);
   const [remarkText, setRemarkText] = useState('');
   const [deleteInquiryId, setDeleteInquiryId] = useState<string | null>(null);

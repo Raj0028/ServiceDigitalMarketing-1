@@ -9,6 +9,7 @@ export default function TiktokThankYou() {
   useSEO({
     title: 'Thank You - TikTok Ads Inquiry Submitted',
     description: 'Thank you for your TikTok Ads inquiry. Our creative team will design viral-worthy content concepts and respond within 24 hours.',
+    noindex: true,
   });
 
   return (

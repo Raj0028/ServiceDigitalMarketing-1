@@ -9,6 +9,7 @@ export default function ContactThankYou() {
   useSEO({
     title: 'Thank You - Contact Inquiry Submitted',
     description: 'Thank you for your inquiry. Our team will review your request and get back to you within 24 hours with a response.',
+    noindex: true,
   });
 
   return (

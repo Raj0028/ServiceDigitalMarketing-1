@@ -9,6 +9,7 @@ export default function LinkedinThankYou() {
   useSEO({
     title: 'Thank You - LinkedIn Ads Inquiry Submitted',
     description: 'Thank you for your LinkedIn Ads inquiry. Our B2B experts will develop a strategy targeting key decision-makers within 24 hours.',
+    noindex: true,
   });
 
   return (

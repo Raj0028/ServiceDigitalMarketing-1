@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
+import { ServiceSchema } from '@/components/structured-data';
 import { SiLinkedin } from 'react-icons/si';
 import { Briefcase, Building, Settings } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -11,10 +12,16 @@ export default function LinkedinAds() {
     description: 'Professional LinkedIn advertising for B2B marketing. Reach 900M+ professionals and decision-makers. Expert campaign management with unmatched targeting precision for business growth.',
     ogTitle: 'LinkedIn Ads - B2B Advertising Excellence',
     ogDescription: 'Connect with decision-makers and professionals where they network. Professional LinkedIn Ads management delivering B2B results with precision targeting.',
+    canonical: 'https://yashsaxena.replit.app/linkedin-ads',
+    ogUrl: 'https://yashsaxena.replit.app/linkedin-ads',
   });
 
   return (
     <div className="min-h-screen bg-background">
+      <ServiceSchema 
+        serviceName="LinkedIn Ads Management" 
+        description="Professional LinkedIn advertising for B2B marketing. Reach 900M+ professionals and decision-makers. Expert campaign management with unmatched targeting precision."
+      />
       <Navigation />
       
       {/* Hero Section */}

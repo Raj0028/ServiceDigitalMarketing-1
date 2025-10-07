@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
+import { ServiceSchema } from '@/components/structured-data';
 import { SiYoutube } from 'react-icons/si';
 import { Play, Video, TrendingUp } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
@@ -11,10 +12,16 @@ export default function YoutubeAds() {
     description: 'Professional YouTube advertising on the world\'s second-largest search engine. Reach 2B+ users with expert video ad campaigns. Multiple formats, high reach, proven conversions.',
     ogTitle: 'YouTube Ads - Video Advertising That Drives Action',
     ogDescription: 'Harness the power of video advertising on YouTube. Capture attention and convert viewers into customers with professionally managed campaigns.',
+    canonical: 'https://yashsaxena.replit.app/youtube-ads',
+    ogUrl: 'https://yashsaxena.replit.app/youtube-ads',
   });
 
   return (
     <div className="min-h-screen bg-background">
+      <ServiceSchema 
+        serviceName="YouTube Ads Management" 
+        description="Professional YouTube advertising on the world's second-largest search engine. Reach 2B+ users with expert video ad campaigns."
+      />
       <Navigation />
       
       {/* Hero Section */}
