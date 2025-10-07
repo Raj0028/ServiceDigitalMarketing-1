@@ -182,15 +182,15 @@ export default function Home() {
                 <Link
                   key={platform.path}
                   href={platform.path}
-                  className={`platform-card bg-white rounded-2xl p-6 cursor-pointer border border-border ${platform.color} block`}
+                  className={`platform-card bg-white rounded-2xl p-6 cursor-pointer border border-border ${platform.color} block text-center`}
                   data-testid={`platform-card-${platform.name.toLowerCase().replace(' ', '-')}`}
                 >
-                  <div className={`w-16 h-16 ${platform.iconBg} rounded-xl flex items-center justify-center mb-4`}>
+                  <div className={`w-16 h-16 ${platform.iconBg} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
                     <Icon className={`text-3xl ${platform.iconColor}`} />
                   </div>
                   <h3 className="text-xl font-bold mb-2">{platform.name}</h3>
                   <p className="text-muted-foreground mb-4">{platform.description}</p>
-                  <div className="flex items-center text-primary font-semibold">
+                  <div className="flex items-center justify-center text-primary font-semibold">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </Link>
