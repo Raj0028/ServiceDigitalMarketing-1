@@ -22,13 +22,13 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="flex flex-col items-center">
             <img src={logoPath} alt="SDM Logo" className="h-12 mb-4 filter brightness-0 invert" />
             <p className="text-white/70 text-sm">Expert paid advertising solutions for businesses worldwide since 2017.</p>
           </div>
           
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="font-bold mb-4">Platforms</h3>
             <ul className="space-y-2 text-sm text-white/70">
               {platformLinks.map((platform) => (
@@ -45,7 +45,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="font-bold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
@@ -65,9 +65,9 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="font-bold mb-4">Connect</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center">
               <a 
                 href="https://www.linkedin.com/company/servicedigitalmarketing/" 
                 target="_blank"
