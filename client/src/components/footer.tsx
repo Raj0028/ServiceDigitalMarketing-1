@@ -60,12 +60,6 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors" data-testid="footer-case-studies">Case Studies</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors" data-testid="footer-blog">Blog</a>
-              </li>
-              <li>
                 <Link href="/contact" className="hover:text-white transition-colors" data-testid="footer-contact">Contact</Link>
               </li>
             </ul>
