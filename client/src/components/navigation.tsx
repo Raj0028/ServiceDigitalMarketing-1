@@ -135,109 +135,105 @@ export default function Navigation() {
         </div>
       </div>
       
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Full Screen */}
       {isMobileMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden z-40"
-            onClick={closeMobileMenu}
-            data-testid="mobile-menu-backdrop"
-          />
-          
-          {/* Menu Panel */}
-          <div 
-            className="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white shadow-2xl lg:hidden z-50 overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-8">
-                <img src={logoPath} alt="SDM Logo" className="h-10" />
-                <button 
-                  onClick={closeMobileMenu} 
-                  className="text-foreground hover:text-primary transition-colors p-2 -mr-2" 
-                  data-testid="mobile-menu-close"
-                  aria-label="Close menu"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-              
-              <div className="space-y-4">
-                <Link
-                  href="/"
-                  onClick={closeMobileMenu}
-                  className="block text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
-                  data-testid="mobile-nav-home"
-                >
-                  Home
-                </Link>
-                
-                <button
-                  onClick={() => {
-                    if (location === '/') {
-                      scrollToSection('about');
-                    } else {
-                      window.location.href = '/#about';
-                    }
-                    closeMobileMenu();
-                  }}
-                  className="block w-full text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
-                  data-testid="mobile-nav-about"
-                >
-                  About Us
-                </button>
-                
-                <Link
-                  href="/contact"
-                  onClick={closeMobileMenu}
-                  className="block text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
-                  data-testid="mobile-nav-contact"
-                >
-                  Contact
-                </Link>
-                
-                <div className="border-t border-border pt-4 mt-4">
-                  <p className="text-sm font-semibold text-muted-foreground mb-3">Advertising Platforms</p>
-                  <div className="space-y-1">
-                    {platforms.map((platform) => {
-                      const Icon = platform.icon;
-                      return (
-                        <Link
-                          key={platform.path}
-                          href={platform.path}
-                          onClick={closeMobileMenu}
-                          className="flex items-center py-2 text-foreground hover:text-primary transition-colors rounded-lg hover:bg-secondary px-2 -mx-2"
-                          data-testid={`mobile-nav-${platform.name.toLowerCase().replace(' ', '-')}`}
-                        >
-                          <Icon className={`mr-3 text-lg ${platform.color}`} />
-                          <span>{platform.name}</span>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <button
-                    onClick={() => {
-                      if (location === '/') {
-                        scrollToSection('platforms');
-                      } else {
-                        window.location.href = '/#platforms';
-                      }
-                      closeMobileMenu();
-                    }}
-                    className="w-full btn-primary text-white px-6 py-3 rounded-lg text-base font-semibold"
-                    data-testid="mobile-nav-get-started"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
+        <div className="fixed inset-0 bg-white lg:hidden z-50 overflow-y-auto" data-testid="mobile-menu-fullscreen">
+          {/* Header */}
+          <div className="sticky top-0 bg-white border-b border-border z-10">
+            <div className="flex justify-between items-center px-4 py-4">
+              <img src={logoPath} alt="SDM Logo" className="h-10" />
+              <button 
+                onClick={closeMobileMenu} 
+                className="text-foreground hover:text-primary transition-colors p-2" 
+                data-testid="mobile-menu-close"
+                aria-label="Close menu"
+              >
+                <X className="h-7 w-7" />
+              </button>
             </div>
           </div>
-        </>
+          
+          {/* Menu Content */}
+          <div className="px-4 py-6">
+            {/* Main Navigation */}
+            <div className="space-y-1 mb-6">
+              <Link
+                href="/"
+                onClick={closeMobileMenu}
+                className="block text-xl font-semibold text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-secondary"
+                data-testid="mobile-nav-home"
+              >
+                Home
+              </Link>
+              
+              <button
+                onClick={() => {
+                  if (location === '/') {
+                    scrollToSection('about');
+                  } else {
+                    window.location.href = '/#about';
+                  }
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left text-xl font-semibold text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-secondary"
+                data-testid="mobile-nav-about"
+              >
+                About Us
+              </button>
+              
+              <Link
+                href="/contact"
+                onClick={closeMobileMenu}
+                className="block text-xl font-semibold text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-secondary"
+                data-testid="mobile-nav-contact"
+              >
+                Contact
+              </Link>
+            </div>
+            
+            {/* Platforms Section */}
+            <div className="mb-6">
+              <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 px-2">
+                Advertising Platforms
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
+                {platforms.map((platform) => {
+                  const Icon = platform.icon;
+                  return (
+                    <Link
+                      key={platform.path}
+                      href={platform.path}
+                      onClick={closeMobileMenu}
+                      className="flex items-center gap-2 py-3 px-3 text-foreground hover:text-primary transition-colors rounded-lg border border-border hover:border-primary hover:bg-secondary"
+                      data-testid={`mobile-nav-${platform.name.toLowerCase().replace(' ', '-')}`}
+                    >
+                      <Icon className={`text-xl ${platform.color}`} />
+                      <span className="text-sm font-medium">{platform.name}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="pt-2">
+              <button
+                onClick={() => {
+                  if (location === '/') {
+                    scrollToSection('platforms');
+                  } else {
+                    window.location.href = '/#platforms';
+                  }
+                  closeMobileMenu();
+                }}
+                className="w-full btn-primary text-white px-6 py-4 rounded-lg text-lg font-semibold"
+                data-testid="mobile-nav-get-started"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </nav>
   );
