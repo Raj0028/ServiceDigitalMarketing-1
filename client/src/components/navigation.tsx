@@ -99,6 +99,16 @@ export default function Navigation() {
               </div>
             </div>
             
+            <Link 
+              href="/contact" 
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location === '/contact' ? 'text-primary' : 'text-foreground'
+              }`}
+              data-testid="nav-contact"
+            >
+              Contact
+            </Link>
+            
             <button
               onClick={() => {
                 if (location === '/') {
@@ -159,6 +169,15 @@ export default function Navigation() {
               >
                 About Us
               </button>
+              
+              <Link
+                href="/contact"
+                onClick={closeMobileMenu}
+                className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
+                data-testid="mobile-nav-contact"
+              >
+                Contact
+              </Link>
               
               <div className="border-t border-border pt-4 mt-4">
                 <p className="text-sm font-semibold text-muted-foreground mb-3">Advertising Platforms</p>
