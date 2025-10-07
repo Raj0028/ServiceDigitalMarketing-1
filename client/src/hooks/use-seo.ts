@@ -7,6 +7,9 @@ interface SEOProps {
   ogDescription?: string;
   ogImage?: string;
   ogUrl?: string;
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 export function useSEO({
@@ -15,7 +18,10 @@ export function useSEO({
   ogTitle,
   ogDescription,
   ogImage,
-  ogUrl
+  ogUrl,
+  canonical,
+  noindex = false,
+  nofollow = false
 }: SEOProps) {
   useEffect(() => {
     document.title = title;
@@ -36,6 +42,25 @@ export function useSEO({
     const removeMetaTag = (name: string, isProperty = false) => {
       const attribute = isProperty ? 'property' : 'name';
       const element = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (element) {
+        element.remove();
+      }
+    };
+
+    const setCanonical = (url: string) => {
+      let element = document.querySelector('link[rel="canonical"]');
+      
+      if (!element) {
+        element = document.createElement('link');
+        element.setAttribute('rel', 'canonical');
+        document.head.appendChild(element);
+      }
+      
+      element.setAttribute('href', url);
+    };
+
+    const removeCanonical = () => {
+      const element = document.querySelector('link[rel="canonical"]');
       if (element) {
         element.remove();
       }
@@ -63,5 +88,21 @@ export function useSEO({
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', ogTitle || title);
     setMetaTag('twitter:description', ogDescription || description);
-  }, [title, description, ogTitle, ogDescription, ogImage, ogUrl]);
+
+    if (canonical) {
+      setCanonical(canonical);
+    } else {
+      removeCanonical();
+    }
+
+    if (noindex || nofollow) {
+      const robotsContent = [
+        noindex ? 'noindex' : 'index',
+        nofollow ? 'nofollow' : 'follow'
+      ].join(', ');
+      setMetaTag('robots', robotsContent);
+    } else {
+      removeMetaTag('robots');
+    }
+  }, [title, description, ogTitle, ogDescription, ogImage, ogUrl, canonical, noindex, nofollow]);
 }
