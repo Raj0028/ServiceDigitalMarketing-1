@@ -24,6 +24,7 @@ import SnapchatThankYou from "@/pages/snapchat-thank-you.tsx";
 import Admin from "@/pages/admin.tsx";
 import Login from "@/pages/login.tsx";
 import YashSaxena from "@/pages/yash-saxena.tsx";
+import Contact from "@/pages/contact.tsx";
 
 function Router() {
   return (
@@ -46,6 +47,7 @@ function Router() {
       <Route path="/tiktok-thank-you" component={TiktokThankYou} />
       <Route path="/snapchat-thank-you" component={SnapchatThankYou} />
       <Route path="/yash-saxena" component={YashSaxena} />
+      <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
       <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
