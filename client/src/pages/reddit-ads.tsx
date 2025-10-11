@@ -60,8 +60,8 @@ export default function RedditAds() {
             
             <div className="hidden lg:block">
               <img 
-                src="https://images.unsplash.com/photo-1579869847514-7c1a19d2d2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Social media engagement with community discussions and user interactions" 
+                src="https://images.unsplash.com/photo-1614028674490-d12fd4eaa168?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Reddit mobile app on smartphone showing community engagement and discussions" 
                 className="rounded-2xl shadow-2xl"
                 data-testid="hero-image"
               />
