@@ -1,16 +1,6 @@
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useMutation } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { apiRequest } from '@/lib/queryClient';
-import { insertInquirySchema } from '@shared/schema';
-import { z } from 'zod';
 import { 
   Mail, 
   Phone, 
@@ -35,12 +25,6 @@ import { SiFacebook, SiInstagram, SiReddit, SiTiktok, SiYoutube, SiGoogle, SiLin
 import yashImage from '@assets/Yash Saxena Image_1759658947529.jpg';
 import { useSEO } from '@/hooks/use-seo';
 import { PersonSchema } from '@/components/structured-data';
-
-const formSchema = insertInquirySchema.extend({
-  platform: z.literal('yash-saxena'),
-});
-
-type FormData = z.infer<typeof formSchema>;
 
 function ProtectedContact() {
   const [revealed, setRevealed] = useState(false);
@@ -112,51 +96,6 @@ export default function YashSaxena() {
     canonical: 'https://servicedigitalmarketing.com/yash-saxena',
     ogUrl: 'https://servicedigitalmarketing.com/yash-saxena',
   });
-
-  const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
-
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      country: '',
-      message: '',
-      platform: 'yash-saxena',
-    },
-  });
-
-  const mutation = useMutation({
-    mutationFn: async (data: FormData) => {
-      const response = await apiRequest('POST', '/api/inquiries', data);
-      return response.json();
-    },
-    onSuccess: () => {
-      setSubmitted(true);
-      form.reset();
-      toast({
-        title: 'Message Sent!',
-        description: "Thank you for your inquiry. I'll get back to you soon.",
-      });
-      setTimeout(() => setSubmitted(false), 5000);
-    },
-    onError: (error: any) => {
-      const errorMessage = error.message || 'Failed to submit inquiry';
-      toast({
-        title: 'Submission Failed',
-        description: errorMessage.includes('429') 
-          ? 'You have reached the maximum number of submissions. Please try again later.' 
-          : 'Please try again later.',
-        variant: 'destructive',
-      });
-    },
-  });
-
-  const onSubmit = (data: FormData) => {
-    mutation.mutate(data);
-  };
 
   const platforms = [
     { icon: SiFacebook, name: 'Facebook Ads', color: 'text-blue-600' },
@@ -577,119 +516,6 @@ export default function YashSaxena() {
                 <div className="text-2xl group-hover:translate-x-1 transition-transform">→</div>
               </a>
             </div>
-          </CardContent>
-        </Card>
-
-        {/* Contact Form Section */}
-        <Card>
-          <CardContent className="p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center" data-testid="text-contact-heading">
-              Let's Grow Your Business Together
-            </h2>
-            <p className="text-gray-600 text-center mb-8">
-              Fill out the form below and I'll get back to you within 24 hours
-            </p>
-
-            {submitted ? (
-              <div className="text-center py-12 bg-green-50 rounded-lg" data-testid="success-message">
-                <CheckCircle2 className="h-16 w-16 text-green-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                <p className="text-gray-700">I've received your inquiry and will get back to you soon.</p>
-              </div>
-            ) : (
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="inquiry-form">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Full Name *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your full name" {...field} data-testid="input-name" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address *</FormLabel>
-                          <FormControl>
-                            <Input type="email" placeholder="your.email@example.com" {...field} data-testid="input-email-form" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Phone Number *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="+1 234 567 8900" {...field} data-testid="input-phone" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="country"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Country *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your country" {...field} data-testid="input-country" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Tell Me About Your Business & Goals *</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Please describe your business, target audience, advertising goals, and budget expectations..."
-                            className="min-h-[150px]"
-                            {...field}
-                            data-testid="input-message"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6"
-                    disabled={mutation.isPending}
-                    data-testid="button-submit-inquiry"
-                  >
-                    {mutation.isPending ? 'Sending...' : 'Send Inquiry'}
-                  </Button>
-                </form>
-              </Form>
-            )}
           </CardContent>
         </Card>
 
