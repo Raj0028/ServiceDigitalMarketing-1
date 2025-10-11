@@ -60,8 +60,8 @@ export default function FacebookAds() {
             
             <div className="hidden lg:block">
               <img 
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Facebook ads manager interface with campaign metrics and performance data" 
+                src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Digital marketer working on social media advertising campaigns" 
                 className="rounded-2xl shadow-2xl"
                 data-testid="hero-image"
               />
