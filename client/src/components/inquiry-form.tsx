@@ -81,7 +81,7 @@ export default function InquiryForm({ platform, platformName, onSuccess }: Inqui
   return (
     <div className="bg-secondary rounded-2xl p-8 sm:p-12">
       <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center" data-testid="form-title">
-        Start Your {platformName} Campaign
+        Kindly fill the enquiry form
       </h2>
       <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto" data-testid="form-description">
         Fill out the form below and our {platformName} experts will get back to you within 24 hours with a customized strategy.

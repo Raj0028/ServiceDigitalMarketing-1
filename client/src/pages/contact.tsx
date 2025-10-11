@@ -1,7 +1,7 @@
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import InquiryForm from '@/components/inquiry-form';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin, Clock } from 'lucide-react';
 import { useSEO } from '@/hooks/use-seo';
 
 export default function Contact() {
@@ -58,23 +58,13 @@ export default function Contact() {
                   </div>
                 </div>
                 
-                <div className="flex items-start" data-testid="contact-phone">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <Phone className="text-primary h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                    <p className="text-muted-foreground">Available on request</p>
-                  </div>
-                </div>
-                
                 <div className="flex items-start" data-testid="contact-location">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="text-primary h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Location</h3>
-                    <p className="text-muted-foreground">Serving clients globally</p>
+                    <p className="text-muted-foreground">Birhana Market, Kanpur, Uttar Pradesh, India</p>
                   </div>
                 </div>
                 
