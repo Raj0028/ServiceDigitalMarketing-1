@@ -60,8 +60,8 @@ export default function GoogleAds() {
             
             <div className="hidden lg:block">
               <img 
-                src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Google Ads interface showing search campaign performance and keyword data" 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Google Analytics dashboard displaying campaign performance metrics and data insights" 
                 className="rounded-2xl shadow-2xl"
                 data-testid="hero-image"
               />
