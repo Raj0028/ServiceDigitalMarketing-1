@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { SiLinkedin, SiInstagram, SiFacebook } from 'react-icons/si';
+import { Mail } from 'lucide-react';
 import logoPath from '@assets/SDM logo B - Copy_1759514538263.png';
 
 const platformLinks = [
@@ -67,7 +68,7 @@ export default function Footer() {
           
           <div className="flex flex-col items-center">
             <h3 className="font-bold mb-4">Connect</h3>
-            <div className="flex space-x-4 justify-center">
+            <div className="flex space-x-4 justify-center mb-4">
               <a 
                 href="https://www.linkedin.com/company/servicedigitalmarketing/" 
                 target="_blank"
@@ -94,6 +95,16 @@ export default function Footer() {
                 data-testid="footer-facebook"
               >
                 <SiFacebook className="h-5 w-5" />
+              </a>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-white/70">
+              <Mail className="h-4 w-4" />
+              <a 
+                href="mailto:team@servicedigitalmarketing.com" 
+                className="hover:text-white transition-colors"
+                data-testid="footer-email"
+              >
+                team@servicedigitalmarketing.com
               </a>
             </div>
           </div>
