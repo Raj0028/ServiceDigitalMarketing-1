@@ -83,10 +83,10 @@ const platforms = [
 
 export default function Home() {
   useSEO({
-    title: 'Digital Marketing Services - Expert Social Media & Search Advertising',
-    description: 'Professional digital marketing and advertising services across Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat. Get expert campaign management and ROI-driven results.',
-    ogTitle: 'Expert Digital Marketing & Paid Advertising Services',
-    ogDescription: 'Drive real results with professional paid advertising campaigns across all major platforms. Expert campaign management for lead generation and brand awareness.',
+    title: 'Service Digital Marketing - Expert Paid Social & Search Advertising',
+    description: 'Service Digital Marketing: Expert paid social & search advertising across Facebook, Instagram, Google Ads, LinkedIn & more. Contact us for ROI-driven results.',
+    ogTitle: 'Service Digital Marketing - Expert Paid Social & Search Advertising',
+    ogDescription: 'Service Digital Marketing delivers professional paid advertising campaigns across Facebook, Instagram, Google Ads, LinkedIn, TikTok & more. Get measurable ROI today.',
     canonical: 'https://servicedigitalmarketing.com/',
     ogUrl: 'https://servicedigitalmarketing.com/',
   });
