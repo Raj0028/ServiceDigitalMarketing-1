@@ -64,6 +64,16 @@ The platform implements enhanced global SEO targeting using hreflang tags for al
 **AI Bot Accessibility:**
 The robots.txt explicitly allows all major AI search bots including OAI-SearchBot, ChatGPT-User, GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent, Amazonbot, and CCBot for maximum global AI-powered search visibility.
 
+**Sitemap Management:**
+An automated sitemap generator (`scripts/generate-sitemap.ts`) creates and updates the sitemap based on public pages. The script automatically:
+- Generates `client/public/sitemap.xml` with all public routes
+- Sets appropriate priorities (1.0 for homepage, 0.9 for platform pages, 0.95 for Yash Saxena profile)
+- Updates lastmod dates automatically
+- Excludes admin, login, and thank-you pages (noindex)
+- Uses servicedigitalmarketing.com as the domain
+
+To update the sitemap after adding new pages, run: `tsx scripts/generate-sitemap.ts`
+
 ## External Dependencies
 
 ### UI Libraries
