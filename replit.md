@@ -255,3 +255,47 @@ All resource links open in new tabs with proper security attributes (target="_bl
 - Updated robots.txt sitemap reference to servicedigitalmarketing.com
 - All SEO meta tags and Open Graph URLs now reference servicedigitalmarketing.com
 - Domain change applied across all 11 public pages
+
+**Primary SEO Keyword Optimization (October 17, 2025)**:
+- Updated website title to "Service Digital Marketing - Expert Paid Social & Search Advertising"
+- Primary keyword "Service Digital Marketing" placed at beginning of title for maximum SEO impact
+- Meta description optimized to 158 characters (SEO optimal length)
+- Meta description: "Service Digital Marketing: Expert paid social & search advertising across Facebook, Instagram, Google Ads, LinkedIn & more. Contact us for ROI-driven results."
+- Open Graph tags updated with primary keyword emphasis
+- Clear call-to-action included in meta description
+- All SEO elements emphasize "Service Digital Marketing" as the brand and primary keyword
+
+### AI Bot Accessibility & Search Visibility (October 17, 2025)
+
+**AI Search Engine Optimization**:
+- Enhanced robots.txt to explicitly allow major AI search bots for maximum visibility
+- Website now accessible to ChatGPT Search, Perplexity AI, Claude AI, Google AI, and other AI platforms
+- Enables website to appear in AI-powered search results and citations
+
+**Allowed AI Bots**:
+- **OpenAI**: OAI-SearchBot (ChatGPT Search), ChatGPT-User (browsing), GPTBot (training)
+- **Anthropic**: ClaudeBot (citations), Claude-Web (crawling), anthropic-ai (training)
+- **Perplexity**: PerplexityBot (index), Perplexity-User (user-triggered)
+- **Google**: Google-Extended (AI training, separate from Googlebot)
+- **Apple**: Applebot-Extended (Apple Intelligence)
+- **Meta**: Meta-ExternalAgent (Meta AI), Meta-ExternalFetcher
+- **Amazon**: Amazonbot (Alexa)
+- **Common Crawl**: CCBot (AI training datasets)
+
+**Expected Benefits**:
+- Visibility in ChatGPT Search results (800M+ weekly users)
+- Citations in Perplexity AI answers
+- Inclusion in Claude AI responses
+- Google AI Overviews eligibility
+- Meta AI and Apple Intelligence discovery
+- AI-powered search engine indexing
+
+**Protected Routes**:
+- /admin, /login, and all thank-you pages remain blocked from all crawlers
+- Only public-facing content pages are accessible to AI bots
+
+**Verification**:
+- robots.txt accessible at https://servicedigitalmarketing.com/robots.txt (HTTP 200)
+- sitemap.xml accessible at https://servicedigitalmarketing.com/sitemap.xml (HTTP 200)
+- All AI bot directives tested and verified
+- E2E tests confirm proper accessibility

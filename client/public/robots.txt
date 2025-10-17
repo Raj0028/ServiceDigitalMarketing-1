@@ -1,7 +1,59 @@
+# Allow all standard crawlers
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /login
 Disallow: /*-thank-you
+
+# Explicitly allow AI search bots for maximum visibility
+# OpenAI (ChatGPT Search, GPT models)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude AI)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (AI training datasets)
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://servicedigitalmarketing.com/sitemap.xml
