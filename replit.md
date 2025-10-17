@@ -30,6 +30,40 @@ The platform uses session-based authentication via Passport.js with a local stra
 
 The architecture emphasizes a modern full-stack approach with a clear separation of concerns. The UI/UX focuses on accessibility and customizability through shadcn/ui and Tailwind CSS. The system prioritizes SEO with comprehensive meta tag management, sitemap, robots.txt, and structured data, ensuring high search visibility and AI bot accessibility. The domain for canonical URLs and sitemap is `servicedigitalmarketing.com`.
 
+### International SEO & Global Targeting
+
+**Hreflang Implementation (October 2025):**
+The platform implements enhanced global SEO targeting using hreflang tags for all major English-speaking markets. This ensures equal search visibility across multiple countries:
+
+**Target Markets:**
+- `en-US` - United States
+- `en-GB` - United Kingdom
+- `en-CA` - Canada
+- `en-AU` - Australia
+- `en-IN` - India
+- `x-default` - Global fallback for all other countries/languages
+
+**Technical Implementation:**
+- HTML `lang` attribute set to `en-US` (US English)
+- Six hreflang tags in HTML `<head>` pointing to servicedigitalmarketing.com
+- All hreflang tags use absolute URLs with HTTPS
+- x-default serves as fallback for countries not explicitly targeted
+
+**Structured Data Updates:**
+- Organization Schema lists "United States" first in areaServed
+- Service Schemas include language indicator (`en-US`)
+- Person Schema mentions US market advertising expertise
+- WebSite Schema includes `inLanguage: 'en-US'`
+
+**Expected Impact:**
+- Equal search priority in US, UK, Canada, Australia, and India
+- Improved global organic visibility across all English-speaking markets
+- Enhanced AI search engine recognition (ChatGPT Search, Perplexity, Claude)
+- Better international SERP performance
+
+**AI Bot Accessibility:**
+The robots.txt explicitly allows all major AI search bots including OAI-SearchBot, ChatGPT-User, GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent, Amazonbot, and CCBot for maximum global AI-powered search visibility.
+
 ## External Dependencies
 
 ### UI Libraries
