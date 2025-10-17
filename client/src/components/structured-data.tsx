@@ -23,22 +23,42 @@ export function OrganizationSchema() {
     <StructuredData
       type="Organization"
       data={{
-        name: 'Yash Saxena Digital Marketing',
-        url: 'https://yashsaxena.replit.app',
-        logo: 'https://yashsaxena.replit.app/logo.png',
-        description: 'Professional digital marketing and advertising services across major social media and search platforms',
+        name: 'Service Digital Marketing',
+        alternateName: 'SDM',
+        url: 'https://servicedigitalmarketing.com',
+        logo: 'https://servicedigitalmarketing.com/logo.png',
+        description: 'Professional digital marketing and advertising services across major social media and search platforms serving clients in the United States, India, and globally',
         address: {
           '@type': 'PostalAddress',
-          addressCountry: 'Global'
+          streetAddress: 'Birhana Market',
+          addressLocality: 'Kanpur',
+          addressRegion: 'Uttar Pradesh',
+          addressCountry: 'IN'
         },
+        areaServed: [
+          {
+            '@type': 'Country',
+            name: 'United States'
+          },
+          {
+            '@type': 'Country',
+            name: 'India'
+          },
+          {
+            '@type': 'GeoCircle',
+            name: 'Global'
+          }
+        ],
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'Sales',
-          email: 'contact@yashsaxena.com'
+          email: 'team@servicedigitalmarketing.com',
+          availableLanguage: ['en-US', 'en-IN', 'hi']
         },
         sameAs: [
-          'https://www.linkedin.com/in/yashsaxena',
-          'https://twitter.com/yashsaxena'
+          'https://www.linkedin.com/company/servicedigitalmarketing/',
+          'https://www.instagram.com/servicedigitalmarketing_com/',
+          'https://www.facebook.com/servicedigitalmarketing.official'
         ]
       }}
     />
@@ -50,12 +70,14 @@ export function WebSiteSchema() {
     <StructuredData
       type="WebSite"
       data={{
-        name: 'Yash Saxena Digital Marketing',
-        url: 'https://yashsaxena.replit.app',
-        description: 'Expert digital marketing services across Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat',
+        name: 'Service Digital Marketing',
+        alternateName: 'SDM',
+        url: 'https://servicedigitalmarketing.com',
+        description: 'Expert digital marketing services across Facebook, Instagram, Reddit, YouTube, Google, LinkedIn, TikTok, and Snapchat serving US and global markets',
+        inLanguage: 'en-US',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://yashsaxena.replit.app/search?q={search_term_string}',
+          target: 'https://servicedigitalmarketing.com/search?q={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
       }}
@@ -69,9 +91,9 @@ export function PersonSchema() {
       type="Person"
       data={{
         name: 'Yash Saxena',
-        url: 'https://yashsaxena.replit.app/yash-saxena',
-        jobTitle: 'Digital Marketing Expert',
-        description: '6.2+ years of experience in digital advertising across global markets including India, Asia-Pacific, Middle East, US, Canada, and Europe',
+        url: 'https://servicedigitalmarketing.com/yash-saxena',
+        jobTitle: 'Digital Marketing Expert & Founder',
+        description: '6.2+ years of experience in digital advertising across global markets including United States, Canada, Europe, India, Asia-Pacific, and Middle East',
         knowsAbout: [
           'Digital Marketing',
           'Social Media Advertising',
@@ -81,12 +103,14 @@ export function PersonSchema() {
           'LinkedIn Ads',
           'TikTok Ads',
           'YouTube Ads',
-          'Performance Marketing'
+          'Performance Marketing',
+          'US Market Advertising'
         ],
         alumniOf: 'Marketing Professional',
         worksFor: {
           '@type': 'Organization',
-          name: 'Yash Saxena Digital Marketing'
+          name: 'Service Digital Marketing',
+          url: 'https://servicedigitalmarketing.com'
         }
       }}
     />
@@ -102,9 +126,24 @@ export function ServiceSchema({ serviceName, description }: { serviceName: strin
         description: description,
         provider: {
           '@type': 'Organization',
-          name: 'Yash Saxena Digital Marketing'
+          name: 'Service Digital Marketing',
+          url: 'https://servicedigitalmarketing.com'
         },
-        areaServed: 'Global',
+        areaServed: [
+          {
+            '@type': 'Country',
+            name: 'United States'
+          },
+          {
+            '@type': 'Country',
+            name: 'India'
+          },
+          {
+            '@type': 'GeoCircle',
+            name: 'Global'
+          }
+        ],
+        availableLanguage: 'en-US',
         serviceType: 'Digital Marketing'
       }}
     />
