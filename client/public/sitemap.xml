@@ -7,25 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://servicedigitalmarketing.com/contact</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://servicedigitalmarketing.com/facebook-ads</loc>
-    <lastmod>2025-10-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://servicedigitalmarketing.com/instagram-ads</loc>
-    <lastmod>2025-10-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://servicedigitalmarketing.com/reddit-ads</loc>
-    <lastmod>2025-10-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://servicedigitalmarketing.com/youtube-ads</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -37,13 +25,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://servicedigitalmarketing.com/instagram-ads</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://servicedigitalmarketing.com/linkedin-ads</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://servicedigitalmarketing.com/tiktok-ads</loc>
+    <loc>https://servicedigitalmarketing.com/reddit-ads</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -55,15 +49,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://servicedigitalmarketing.com/tiktok-ads</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://servicedigitalmarketing.com/yash-saxena</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://servicedigitalmarketing.com/contact</loc>
+    <loc>https://servicedigitalmarketing.com/youtube-ads</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>

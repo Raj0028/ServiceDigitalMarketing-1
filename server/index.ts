@@ -3,6 +3,10 @@ import session from "express-session";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import { passport } from "./auth";
+import { exec } from "child_process";
+import { promisify } from "util";
+
+const execAsync = promisify(exec);
 
 const app = express();
 
@@ -67,6 +71,15 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Auto-generate sitemap from App.tsx routes
+  try {
+    log("🗺️  Generating sitemap from routes...");
+    await execAsync('tsx scripts/generate-sitemap.ts');
+    log("✅ Sitemap updated successfully");
+  } catch (error) {
+    log("⚠️  Sitemap generation failed (non-critical)");
+  }
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
