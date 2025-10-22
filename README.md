@@ -120,7 +120,10 @@ ADMIN_ID=admin-1
 SESSION_SECRET=generate-random-string-here
 PORT=5000
 NODE_ENV=development
+HOST=localhost
 ```
+
+**⚠️ IMPORTANT FOR WINDOWS:** The `HOST=localhost` line is **required on Windows** to avoid socket binding errors (`ENOTSUP`). Don't remove it!
 
 **Generate SESSION_SECRET:**
 ```cmd
@@ -693,6 +696,54 @@ npm run db:push
 - **SEO Guide**: See `SITEMAP-GUIDE.md` for automatic sitemap details
 - **Deployment**: See `VERCEL-DEPLOYMENT.md` for Vercel-specific instructions
 - **Project Info**: See `replit.md` for architecture details
+
+---
+
+## 🐛 Common Issues & Troubleshooting
+
+### Windows: Socket Binding Error (ENOTSUP)
+
+**Error:**
+```
+Error: listen ENOTSUP: operation not supported on socket 0.0.0.0:5000
+```
+
+**Solution:**
+Add `HOST=localhost` to your `.env` file:
+
+```env
+HOST=localhost
+```
+
+This tells the server to bind to `localhost` instead of `0.0.0.0`, which Windows doesn't support the same way Linux does.
+
+### Database Connection Showing `undefined`
+
+**Symptoms:**
+- Console shows `DATABASE_URL: undefined`
+- Server crashes on startup
+
+**Solution:**
+1. Make sure `.env` file exists in root directory
+2. Verify `DATABASE_URL` is set in `.env`
+3. Restart the server: `npx tsx server/index.ts`
+
+### Port Already in Use
+
+**Error:**
+```
+Error: listen EADDRINUSE: address already in use :::5000
+```
+
+**Solution:**
+```bash
+# Windows (Command Prompt as Admin)
+netstat -ano | findstr :5000
+taskkill /PID <PID> /F
+
+# Mac/Linux
+lsof -ti:5000 | xargs kill -9
+```
 
 ---
 
