@@ -1,9 +1,9 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 
-const ADMIN_EMAIL = "yashsaxena.personal@gmail.com";
-const ADMIN_PASSWORD = "Miet2015@19";
-const ADMIN_ID = "admin-1";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@example.com";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "changeThisPassword";
+const ADMIN_ID = process.env.ADMIN_ID || "admin-1";
 
 interface AdminUser {
   id: string;
