@@ -18,8 +18,12 @@ declare module 'http' {
   }
 }
 
+if (!process.env.SESSION_SECRET) {
+  throw new Error("SESSION_SECRET must be set in environment variables");
+}
+
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: {

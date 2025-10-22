@@ -1,8 +1,12 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@example.com";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "changeThisPassword";
+if (!process.env.ADMIN_EMAIL || !process.env.ADMIN_PASSWORD) {
+  throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD must be set in environment variables");
+}
+
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 const ADMIN_ID = process.env.ADMIN_ID || "admin-1";
 
 interface AdminUser {
