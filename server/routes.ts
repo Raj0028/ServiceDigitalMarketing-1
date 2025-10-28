@@ -54,13 +54,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const ipAddress = req.ip || req.socket.remoteAddress || "unknown";
       
-      const canSubmit = await checkIpRateLimit(ipAddress);
-      if (!canSubmit) {
-        return res.status(429).json({
-          success: false,
-          message: `You have reached the maximum of ${IP_RATE_LIMIT} submissions within ${IP_RATE_LIMIT_DAYS} days. Please try again later.`
-        });
-      }
+      // const canSubmit = await checkIpRateLimit(ipAddress);
+      // if (!canSubmit) {
+      //   return res.status(429).json({
+      //     success: false,
+      //     message: `You have reached the maximum of ${IP_RATE_LIMIT} submissions within ${IP_RATE_LIMIT_DAYS} days. Please try again later.`
+      //   });
+      // }
 
       const validatedData = insertInquirySchema.parse(req.body);
       const inquiry = await storage.createInquiry({

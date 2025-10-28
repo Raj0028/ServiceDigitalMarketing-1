@@ -5,7 +5,14 @@ import { passport } from '../server/auth.js';
 
 const app = express();
 
+console.log('[API] Express serverless function initializing...');
+
 app.set('trust proxy', 1);
+
+app.use((req, res, next) => {
+  console.log(`[API] Incoming request: ${req.method} ${req.url}`);
+  next();
+});
 
 app.use(session({
   secret: process.env.SESSION_SECRET || 'default_secret',
@@ -25,5 +32,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 registerRoutes(app);
+console.log('[API] registerRoutes called.');
+
+app.use((err, req, res, next) => {
+  console.error('[API] Error:', err);
+  res.status(500).json({ error: 'Internal Server Error', details: err.message });
+});
 
 export default app;
